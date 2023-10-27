@@ -125,3 +125,7 @@ AttributeError: 'Logger' object has no attribute 'success'
 Bad Request: /api/v1/restaurant/
 Bad Request: /api/v1/restaurant/
 Bad Request: /api/v1/restaurant/
+Unauthorized: /api/v1/restaurant/menu/
+Unauthorized: /api/v1/restaurant/
+Bad Request: /api/v1/restaurant/menu/
+Bad Request: /api/v1/restaurant/menu/
