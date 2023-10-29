@@ -129,3 +129,1604 @@ Unauthorized: /api/v1/restaurant/menu/
 Unauthorized: /api/v1/restaurant/
 Bad Request: /api/v1/restaurant/menu/
 Bad Request: /api/v1/restaurant/menu/
+Internal Server Error: /api/v1/restaurant/
+Traceback (most recent call last):
+  File "/Users/avee/workspace/dosier/bongo-restaurant/venv/lib/python3.9/site-packages/django/db/backends/utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+  File "/Users/avee/workspace/dosier/bongo-restaurant/venv/lib/python3.9/site-packages/django/db/backends/sqlite3/base.py", line 328, in execute
+    return super().execute(query, params)
+sqlite3.OperationalError: no such table: employee_employee
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/avee/workspace/dosier/bongo-restaurant/venv/lib/python3.9/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Users/avee/workspace/dosier/bongo-restaurant/venv/lib/python3.9/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/avee/workspace/dosier/bongo-restaurant/venv/lib/python3.9/site-packages/django/views/decorators/csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+  File "/Users/avee/workspace/dosier/bongo-restaurant/venv/lib/python3.9/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Users/avee/workspace/dosier/bongo-restaurant/venv/lib/python3.9/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/Users/avee/workspace/dosier/bongo-restaurant/venv/lib/python3.9/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/Users/avee/workspace/dosier/bongo-restaurant/venv/lib/python3.9/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/Users/avee/workspace/dosier/bongo-restaurant/venv/lib/python3.9/site-packages/rest_framework/views.py", line 497, in dispatch
+    self.initial(request, *args, **kwargs)
+  File "/Users/avee/workspace/dosier/bongo-restaurant/venv/lib/python3.9/site-packages/rest_framework/views.py", line 414, in initial
+    self.perform_authentication(request)
+  File "/Users/avee/workspace/dosier/bongo-restaurant/venv/lib/python3.9/site-packages/rest_framework/views.py", line 324, in perform_authentication
+    request.user
+  File "/Users/avee/workspace/dosier/bongo-restaurant/venv/lib/python3.9/site-packages/rest_framework/request.py", line 227, in user
+    self._authenticate()
+  File "/Users/avee/workspace/dosier/bongo-restaurant/venv/lib/python3.9/site-packages/rest_framework/request.py", line 380, in _authenticate
+    user_auth_tuple = authenticator.authenticate(self)
+  File "/Users/avee/workspace/dosier/bongo-restaurant/venv/lib/python3.9/site-packages/rest_framework_simplejwt/authentication.py", line 51, in authenticate
+    return self.get_user(validated_token), validated_token
+  File "/Users/avee/workspace/dosier/bongo-restaurant/venv/lib/python3.9/site-packages/rest_framework_simplejwt/authentication.py", line 130, in get_user
+    user = self.user_model.objects.get(**{api_settings.USER_ID_FIELD: user_id})
+  File "/Users/avee/workspace/dosier/bongo-restaurant/venv/lib/python3.9/site-packages/django/db/models/manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/Users/avee/workspace/dosier/bongo-restaurant/venv/lib/python3.9/site-packages/django/db/models/query.py", line 633, in get
+    num = len(clone)
+  File "/Users/avee/workspace/dosier/bongo-restaurant/venv/lib/python3.9/site-packages/django/db/models/query.py", line 380, in __len__
+    self._fetch_all()
+  File "/Users/avee/workspace/dosier/bongo-restaurant/venv/lib/python3.9/site-packages/django/db/models/query.py", line 1881, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+  File "/Users/avee/workspace/dosier/bongo-restaurant/venv/lib/python3.9/site-packages/django/db/models/query.py", line 91, in __iter__
+    results = compiler.execute_sql(
+  File "/Users/avee/workspace/dosier/bongo-restaurant/venv/lib/python3.9/site-packages/django/db/models/sql/compiler.py", line 1562, in execute_sql
+    cursor.execute(sql, params)
+  File "/Users/avee/workspace/dosier/bongo-restaurant/venv/lib/python3.9/site-packages/django/db/backends/utils.py", line 102, in execute
+    return super().execute(sql, params)
+  File "/Users/avee/workspace/dosier/bongo-restaurant/venv/lib/python3.9/site-packages/django/db/backends/utils.py", line 67, in execute
+    return self._execute_with_wrappers(
+  File "/Users/avee/workspace/dosier/bongo-restaurant/venv/lib/python3.9/site-packages/django/db/backends/utils.py", line 80, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "/Users/avee/workspace/dosier/bongo-restaurant/venv/lib/python3.9/site-packages/django/db/backends/utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+  File "/Users/avee/workspace/dosier/bongo-restaurant/venv/lib/python3.9/site-packages/django/db/utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "/Users/avee/workspace/dosier/bongo-restaurant/venv/lib/python3.9/site-packages/django/db/backends/utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+  File "/Users/avee/workspace/dosier/bongo-restaurant/venv/lib/python3.9/site-packages/django/db/backends/sqlite3/base.py", line 328, in execute
+    return super().execute(query, params)
+django.db.utils.OperationalError: no such table: employee_employee
+Unauthorized: /api/v1/restaurant/
+Unauthorized: /api/v1/auth/login/
+Unauthorized: /api/v1/restaurant/
+Internal Server Error: /api/v1/operation/todays-menu
+Traceback (most recent call last):
+  File "/Users/avee/workspace/dosier/bongo-restaurant/venv/lib/python3.9/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Users/avee/workspace/dosier/bongo-restaurant/venv/lib/python3.9/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/avee/workspace/dosier/bongo-restaurant/venv/lib/python3.9/site-packages/django/views/decorators/csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+  File "/Users/avee/workspace/dosier/bongo-restaurant/venv/lib/python3.9/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Users/avee/workspace/dosier/bongo-restaurant/venv/lib/python3.9/site-packages/rest_framework/views.py", line 511, in dispatch
+    self.response = self.finalize_response(request, response, *args, **kwargs)
+  File "/Users/avee/workspace/dosier/bongo-restaurant/venv/lib/python3.9/site-packages/rest_framework/views.py", line 423, in finalize_response
+    assert isinstance(response, HttpResponseBase), (
+AssertionError: Expected a `Response`, `HttpResponse` or `HttpStreamingResponse` to be returned from the view, but received a `<class 'NoneType'>`
+Internal Server Error: /api/v1/operation/todays-menu
+Traceback (most recent call last):
+  File "/Users/avee/workspace/dosier/bongo-restaurant/venv/lib/python3.9/site-packages/rest_framework/fields.py", line 446, in get_attribute
+    return get_attribute(instance, self.source_attrs)
+  File "/Users/avee/workspace/dosier/bongo-restaurant/venv/lib/python3.9/site-packages/rest_framework/fields.py", line 96, in get_attribute
+    instance = getattr(instance, attr)
+AttributeError: 'Menu' object has no attribute 'menu'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/avee/workspace/dosier/bongo-restaurant/venv/lib/python3.9/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Users/avee/workspace/dosier/bongo-restaurant/venv/lib/python3.9/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/avee/workspace/dosier/bongo-restaurant/venv/lib/python3.9/site-packages/django/views/decorators/csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+  File "/Users/avee/workspace/dosier/bongo-restaurant/venv/lib/python3.9/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Users/avee/workspace/dosier/bongo-restaurant/venv/lib/python3.9/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/Users/avee/workspace/dosier/bongo-restaurant/venv/lib/python3.9/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/Users/avee/workspace/dosier/bongo-restaurant/venv/lib/python3.9/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/Users/avee/workspace/dosier/bongo-restaurant/venv/lib/python3.9/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Users/avee/workspace/dosier/bongo-restaurant/operation/views.py", line 24, in get
+    todays_menu_serializer.data,
+  File "/Users/avee/workspace/dosier/bongo-restaurant/venv/lib/python3.9/site-packages/rest_framework/serializers.py", line 768, in data
+    ret = super().data
+  File "/Users/avee/workspace/dosier/bongo-restaurant/venv/lib/python3.9/site-packages/rest_framework/serializers.py", line 253, in data
+    self._data = self.to_representation(self.instance)
+  File "/Users/avee/workspace/dosier/bongo-restaurant/venv/lib/python3.9/site-packages/rest_framework/serializers.py", line 686, in to_representation
+    return [
+  File "/Users/avee/workspace/dosier/bongo-restaurant/venv/lib/python3.9/site-packages/rest_framework/serializers.py", line 687, in <listcomp>
+    self.child.to_representation(item) for item in iterable
+  File "/Users/avee/workspace/dosier/bongo-restaurant/venv/lib/python3.9/site-packages/rest_framework/serializers.py", line 509, in to_representation
+    attribute = field.get_attribute(instance)
+  File "/Users/avee/workspace/dosier/bongo-restaurant/venv/lib/python3.9/site-packages/rest_framework/fields.py", line 479, in get_attribute
+    raise type(exc)(msg)
+AttributeError: Got AttributeError when attempting to get a value for field `menu` on serializer `CurrentDayMenuSerializer`.
+The serializer field might be named incorrectly and not match any attribute or key on the `Menu` instance.
+Original exception text was: 'Menu' object has no attribute 'menu'.
+Internal Server Error: /api/v1/operation/todays-menu
+Traceback (most recent call last):
+  File "/Users/avee/workspace/dosier/bongo-restaurant/venv/lib/python3.9/site-packages/rest_framework/fields.py", line 446, in get_attribute
+    return get_attribute(instance, self.source_attrs)
+  File "/Users/avee/workspace/dosier/bongo-restaurant/venv/lib/python3.9/site-packages/rest_framework/fields.py", line 96, in get_attribute
+    instance = getattr(instance, attr)
+AttributeError: 'Restaurant' object has no attribute 'item_list'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/avee/workspace/dosier/bongo-restaurant/venv/lib/python3.9/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Users/avee/workspace/dosier/bongo-restaurant/venv/lib/python3.9/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/avee/workspace/dosier/bongo-restaurant/venv/lib/python3.9/site-packages/django/views/decorators/csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+  File "/Users/avee/workspace/dosier/bongo-restaurant/venv/lib/python3.9/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Users/avee/workspace/dosier/bongo-restaurant/venv/lib/python3.9/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/Users/avee/workspace/dosier/bongo-restaurant/venv/lib/python3.9/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/Users/avee/workspace/dosier/bongo-restaurant/venv/lib/python3.9/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/Users/avee/workspace/dosier/bongo-restaurant/venv/lib/python3.9/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Users/avee/workspace/dosier/bongo-restaurant/operation/views.py", line 24, in get
+    todays_menu_serializer.data,
+  File "/Users/avee/workspace/dosier/bongo-restaurant/venv/lib/python3.9/site-packages/rest_framework/serializers.py", line 768, in data
+    ret = super().data
+  File "/Users/avee/workspace/dosier/bongo-restaurant/venv/lib/python3.9/site-packages/rest_framework/serializers.py", line 253, in data
+    self._data = self.to_representation(self.instance)
+  File "/Users/avee/workspace/dosier/bongo-restaurant/venv/lib/python3.9/site-packages/rest_framework/serializers.py", line 686, in to_representation
+    return [
+  File "/Users/avee/workspace/dosier/bongo-restaurant/venv/lib/python3.9/site-packages/rest_framework/serializers.py", line 687, in <listcomp>
+    self.child.to_representation(item) for item in iterable
+  File "/Users/avee/workspace/dosier/bongo-restaurant/venv/lib/python3.9/site-packages/rest_framework/serializers.py", line 509, in to_representation
+    attribute = field.get_attribute(instance)
+  File "/Users/avee/workspace/dosier/bongo-restaurant/venv/lib/python3.9/site-packages/rest_framework/fields.py", line 479, in get_attribute
+    raise type(exc)(msg)
+AttributeError: Got AttributeError when attempting to get a value for field `menu` on serializer `CurrentDayMenuSerializer`.
+The serializer field might be named incorrectly and not match any attribute or key on the `Menu` instance.
+Original exception text was: 'Restaurant' object has no attribute 'item_list'.
+Internal Server Error: /api/v1/operation/todays-menu
+Traceback (most recent call last):
+  File "/Users/avee/workspace/dosier/bongo-restaurant/venv/lib/python3.9/site-packages/rest_framework/fields.py", line 446, in get_attribute
+    return get_attribute(instance, self.source_attrs)
+  File "/Users/avee/workspace/dosier/bongo-restaurant/venv/lib/python3.9/site-packages/rest_framework/fields.py", line 96, in get_attribute
+    instance = getattr(instance, attr)
+AttributeError: 'Menu' object has no attribute 'menu'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/avee/workspace/dosier/bongo-restaurant/venv/lib/python3.9/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Users/avee/workspace/dosier/bongo-restaurant/venv/lib/python3.9/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/avee/workspace/dosier/bongo-restaurant/venv/lib/python3.9/site-packages/django/views/decorators/csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+  File "/Users/avee/workspace/dosier/bongo-restaurant/venv/lib/python3.9/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Users/avee/workspace/dosier/bongo-restaurant/venv/lib/python3.9/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/Users/avee/workspace/dosier/bongo-restaurant/venv/lib/python3.9/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/Users/avee/workspace/dosier/bongo-restaurant/venv/lib/python3.9/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/Users/avee/workspace/dosier/bongo-restaurant/venv/lib/python3.9/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Users/avee/workspace/dosier/bongo-restaurant/operation/views.py", line 24, in get
+    todays_menu_serializer.data,
+  File "/Users/avee/workspace/dosier/bongo-restaurant/venv/lib/python3.9/site-packages/rest_framework/serializers.py", line 768, in data
+    ret = super().data
+  File "/Users/avee/workspace/dosier/bongo-restaurant/venv/lib/python3.9/site-packages/rest_framework/serializers.py", line 253, in data
+    self._data = self.to_representation(self.instance)
+  File "/Users/avee/workspace/dosier/bongo-restaurant/venv/lib/python3.9/site-packages/rest_framework/serializers.py", line 686, in to_representation
+    return [
+  File "/Users/avee/workspace/dosier/bongo-restaurant/venv/lib/python3.9/site-packages/rest_framework/serializers.py", line 687, in <listcomp>
+    self.child.to_representation(item) for item in iterable
+  File "/Users/avee/workspace/dosier/bongo-restaurant/venv/lib/python3.9/site-packages/rest_framework/serializers.py", line 509, in to_representation
+    attribute = field.get_attribute(instance)
+  File "/Users/avee/workspace/dosier/bongo-restaurant/venv/lib/python3.9/site-packages/rest_framework/fields.py", line 479, in get_attribute
+    raise type(exc)(msg)
+AttributeError: Got AttributeError when attempting to get a value for field `menu` on serializer `CurrentDayMenuSerializer`.
+The serializer field might be named incorrectly and not match any attribute or key on the `Menu` instance.
+Original exception text was: 'Menu' object has no attribute 'menu'.
+Internal Server Error: /api/v1/operation/todays-menu
+Traceback (most recent call last):
+  File "/Users/avee/workspace/dosier/bongo-restaurant/venv/lib/python3.9/site-packages/rest_framework/fields.py", line 446, in get_attribute
+    return get_attribute(instance, self.source_attrs)
+  File "/Users/avee/workspace/dosier/bongo-restaurant/venv/lib/python3.9/site-packages/rest_framework/fields.py", line 96, in get_attribute
+    instance = getattr(instance, attr)
+AttributeError: 'Menu' object has no attribute 'menu'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/avee/workspace/dosier/bongo-restaurant/venv/lib/python3.9/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Users/avee/workspace/dosier/bongo-restaurant/venv/lib/python3.9/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/avee/workspace/dosier/bongo-restaurant/venv/lib/python3.9/site-packages/django/views/decorators/csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+  File "/Users/avee/workspace/dosier/bongo-restaurant/venv/lib/python3.9/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Users/avee/workspace/dosier/bongo-restaurant/venv/lib/python3.9/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/Users/avee/workspace/dosier/bongo-restaurant/venv/lib/python3.9/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/Users/avee/workspace/dosier/bongo-restaurant/venv/lib/python3.9/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/Users/avee/workspace/dosier/bongo-restaurant/venv/lib/python3.9/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Users/avee/workspace/dosier/bongo-restaurant/operation/views.py", line 24, in get
+    todays_menu_serializer.data,
+  File "/Users/avee/workspace/dosier/bongo-restaurant/venv/lib/python3.9/site-packages/rest_framework/serializers.py", line 768, in data
+    ret = super().data
+  File "/Users/avee/workspace/dosier/bongo-restaurant/venv/lib/python3.9/site-packages/rest_framework/serializers.py", line 253, in data
+    self._data = self.to_representation(self.instance)
+  File "/Users/avee/workspace/dosier/bongo-restaurant/venv/lib/python3.9/site-packages/rest_framework/serializers.py", line 686, in to_representation
+    return [
+  File "/Users/avee/workspace/dosier/bongo-restaurant/venv/lib/python3.9/site-packages/rest_framework/serializers.py", line 687, in <listcomp>
+    self.child.to_representation(item) for item in iterable
+  File "/Users/avee/workspace/dosier/bongo-restaurant/venv/lib/python3.9/site-packages/rest_framework/serializers.py", line 509, in to_representation
+    attribute = field.get_attribute(instance)
+  File "/Users/avee/workspace/dosier/bongo-restaurant/venv/lib/python3.9/site-packages/rest_framework/fields.py", line 479, in get_attribute
+    raise type(exc)(msg)
+AttributeError: Got AttributeError when attempting to get a value for field `menu` on serializer `CurrentDayMenuSerializer`.
+The serializer field might be named incorrectly and not match any attribute or key on the `Menu` instance.
+Original exception text was: 'Menu' object has no attribute 'menu'.
+Internal Server Error: /api/v1/operation/todays-menu
+Traceback (most recent call last):
+  File "/Users/avee/workspace/dosier/bongo-restaurant/venv/lib/python3.9/site-packages/rest_framework/fields.py", line 446, in get_attribute
+    return get_attribute(instance, self.source_attrs)
+  File "/Users/avee/workspace/dosier/bongo-restaurant/venv/lib/python3.9/site-packages/rest_framework/fields.py", line 96, in get_attribute
+    instance = getattr(instance, attr)
+AttributeError: 'Menu' object has no attribute 'menu'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/avee/workspace/dosier/bongo-restaurant/venv/lib/python3.9/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Users/avee/workspace/dosier/bongo-restaurant/venv/lib/python3.9/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/avee/workspace/dosier/bongo-restaurant/venv/lib/python3.9/site-packages/django/views/decorators/csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+  File "/Users/avee/workspace/dosier/bongo-restaurant/venv/lib/python3.9/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Users/avee/workspace/dosier/bongo-restaurant/venv/lib/python3.9/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/Users/avee/workspace/dosier/bongo-restaurant/venv/lib/python3.9/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/Users/avee/workspace/dosier/bongo-restaurant/venv/lib/python3.9/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/Users/avee/workspace/dosier/bongo-restaurant/venv/lib/python3.9/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Users/avee/workspace/dosier/bongo-restaurant/operation/views.py", line 24, in get
+    todays_menu_serializer.data,
+  File "/Users/avee/workspace/dosier/bongo-restaurant/venv/lib/python3.9/site-packages/rest_framework/serializers.py", line 768, in data
+    ret = super().data
+  File "/Users/avee/workspace/dosier/bongo-restaurant/venv/lib/python3.9/site-packages/rest_framework/serializers.py", line 253, in data
+    self._data = self.to_representation(self.instance)
+  File "/Users/avee/workspace/dosier/bongo-restaurant/venv/lib/python3.9/site-packages/rest_framework/serializers.py", line 686, in to_representation
+    return [
+  File "/Users/avee/workspace/dosier/bongo-restaurant/venv/lib/python3.9/site-packages/rest_framework/serializers.py", line 687, in <listcomp>
+    self.child.to_representation(item) for item in iterable
+  File "/Users/avee/workspace/dosier/bongo-restaurant/venv/lib/python3.9/site-packages/rest_framework/serializers.py", line 509, in to_representation
+    attribute = field.get_attribute(instance)
+  File "/Users/avee/workspace/dosier/bongo-restaurant/venv/lib/python3.9/site-packages/rest_framework/fields.py", line 479, in get_attribute
+    raise type(exc)(msg)
+AttributeError: Got AttributeError when attempting to get a value for field `date_time` on serializer `CurrentDayMenuSerializer`.
+The serializer field might be named incorrectly and not match any attribute or key on the `Menu` instance.
+Original exception text was: 'Menu' object has no attribute 'menu'.
+Internal Server Error: /api/v1/operation/todays-menu
+Traceback (most recent call last):
+  File "/Users/avee/workspace/dosier/bongo-restaurant/venv/lib/python3.9/site-packages/rest_framework/fields.py", line 446, in get_attribute
+    return get_attribute(instance, self.source_attrs)
+  File "/Users/avee/workspace/dosier/bongo-restaurant/venv/lib/python3.9/site-packages/rest_framework/fields.py", line 96, in get_attribute
+    instance = getattr(instance, attr)
+AttributeError: 'Menu' object has no attribute 'menu'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/avee/workspace/dosier/bongo-restaurant/venv/lib/python3.9/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Users/avee/workspace/dosier/bongo-restaurant/venv/lib/python3.9/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/avee/workspace/dosier/bongo-restaurant/venv/lib/python3.9/site-packages/django/views/decorators/csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+  File "/Users/avee/workspace/dosier/bongo-restaurant/venv/lib/python3.9/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Users/avee/workspace/dosier/bongo-restaurant/venv/lib/python3.9/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/Users/avee/workspace/dosier/bongo-restaurant/venv/lib/python3.9/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/Users/avee/workspace/dosier/bongo-restaurant/venv/lib/python3.9/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/Users/avee/workspace/dosier/bongo-restaurant/venv/lib/python3.9/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Users/avee/workspace/dosier/bongo-restaurant/operation/views.py", line 24, in get
+    todays_menu_serializer.data,
+  File "/Users/avee/workspace/dosier/bongo-restaurant/venv/lib/python3.9/site-packages/rest_framework/serializers.py", line 768, in data
+    ret = super().data
+  File "/Users/avee/workspace/dosier/bongo-restaurant/venv/lib/python3.9/site-packages/rest_framework/serializers.py", line 253, in data
+    self._data = self.to_representation(self.instance)
+  File "/Users/avee/workspace/dosier/bongo-restaurant/venv/lib/python3.9/site-packages/rest_framework/serializers.py", line 686, in to_representation
+    return [
+  File "/Users/avee/workspace/dosier/bongo-restaurant/venv/lib/python3.9/site-packages/rest_framework/serializers.py", line 687, in <listcomp>
+    self.child.to_representation(item) for item in iterable
+  File "/Users/avee/workspace/dosier/bongo-restaurant/venv/lib/python3.9/site-packages/rest_framework/serializers.py", line 509, in to_representation
+    attribute = field.get_attribute(instance)
+  File "/Users/avee/workspace/dosier/bongo-restaurant/venv/lib/python3.9/site-packages/rest_framework/fields.py", line 479, in get_attribute
+    raise type(exc)(msg)
+AttributeError: Got AttributeError when attempting to get a value for field `restaurant` on serializer `CurrentDayMenuSerializer`.
+The serializer field might be named incorrectly and not match any attribute or key on the `Menu` instance.
+Original exception text was: 'Menu' object has no attribute 'menu'.
+Internal Server Error: /api/v1/operation/todays-menu
+Traceback (most recent call last):
+  File "/Users/avee/workspace/dosier/bongo-restaurant/venv/lib/python3.9/site-packages/rest_framework/fields.py", line 446, in get_attribute
+    return get_attribute(instance, self.source_attrs)
+  File "/Users/avee/workspace/dosier/bongo-restaurant/venv/lib/python3.9/site-packages/rest_framework/fields.py", line 96, in get_attribute
+    instance = getattr(instance, attr)
+AttributeError: 'Menu' object has no attribute 'menu'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/avee/workspace/dosier/bongo-restaurant/venv/lib/python3.9/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Users/avee/workspace/dosier/bongo-restaurant/venv/lib/python3.9/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/avee/workspace/dosier/bongo-restaurant/venv/lib/python3.9/site-packages/django/views/decorators/csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+  File "/Users/avee/workspace/dosier/bongo-restaurant/venv/lib/python3.9/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Users/avee/workspace/dosier/bongo-restaurant/venv/lib/python3.9/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/Users/avee/workspace/dosier/bongo-restaurant/venv/lib/python3.9/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/Users/avee/workspace/dosier/bongo-restaurant/venv/lib/python3.9/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/Users/avee/workspace/dosier/bongo-restaurant/venv/lib/python3.9/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Users/avee/workspace/dosier/bongo-restaurant/operation/views.py", line 24, in get
+    todays_menu_serializer.data,
+  File "/Users/avee/workspace/dosier/bongo-restaurant/venv/lib/python3.9/site-packages/rest_framework/serializers.py", line 768, in data
+    ret = super().data
+  File "/Users/avee/workspace/dosier/bongo-restaurant/venv/lib/python3.9/site-packages/rest_framework/serializers.py", line 253, in data
+    self._data = self.to_representation(self.instance)
+  File "/Users/avee/workspace/dosier/bongo-restaurant/venv/lib/python3.9/site-packages/rest_framework/serializers.py", line 686, in to_representation
+    return [
+  File "/Users/avee/workspace/dosier/bongo-restaurant/venv/lib/python3.9/site-packages/rest_framework/serializers.py", line 687, in <listcomp>
+    self.child.to_representation(item) for item in iterable
+  File "/Users/avee/workspace/dosier/bongo-restaurant/venv/lib/python3.9/site-packages/rest_framework/serializers.py", line 509, in to_representation
+    attribute = field.get_attribute(instance)
+  File "/Users/avee/workspace/dosier/bongo-restaurant/venv/lib/python3.9/site-packages/rest_framework/fields.py", line 479, in get_attribute
+    raise type(exc)(msg)
+AttributeError: Got AttributeError when attempting to get a value for field `restaurant` on serializer `CurrentDayMenuSerializer`.
+The serializer field might be named incorrectly and not match any attribute or key on the `Menu` instance.
+Original exception text was: 'Menu' object has no attribute 'menu'.
+Internal Server Error: /api/v1/operation/todays-menu
+Traceback (most recent call last):
+  File "/Users/avee/workspace/dosier/bongo-restaurant/venv/lib/python3.9/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Users/avee/workspace/dosier/bongo-restaurant/venv/lib/python3.9/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/avee/workspace/dosier/bongo-restaurant/venv/lib/python3.9/site-packages/django/views/decorators/csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+  File "/Users/avee/workspace/dosier/bongo-restaurant/venv/lib/python3.9/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Users/avee/workspace/dosier/bongo-restaurant/venv/lib/python3.9/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/Users/avee/workspace/dosier/bongo-restaurant/venv/lib/python3.9/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/Users/avee/workspace/dosier/bongo-restaurant/venv/lib/python3.9/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/Users/avee/workspace/dosier/bongo-restaurant/venv/lib/python3.9/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Users/avee/workspace/dosier/bongo-restaurant/operation/views.py", line 24, in get
+    todays_menu_serializer.data,
+  File "/Users/avee/workspace/dosier/bongo-restaurant/venv/lib/python3.9/site-packages/rest_framework/serializers.py", line 768, in data
+    ret = super().data
+  File "/Users/avee/workspace/dosier/bongo-restaurant/venv/lib/python3.9/site-packages/rest_framework/serializers.py", line 253, in data
+    self._data = self.to_representation(self.instance)
+  File "/Users/avee/workspace/dosier/bongo-restaurant/venv/lib/python3.9/site-packages/rest_framework/serializers.py", line 686, in to_representation
+    return [
+  File "/Users/avee/workspace/dosier/bongo-restaurant/venv/lib/python3.9/site-packages/rest_framework/serializers.py", line 687, in <listcomp>
+    self.child.to_representation(item) for item in iterable
+  File "/Users/avee/workspace/dosier/bongo-restaurant/venv/lib/python3.9/site-packages/rest_framework/serializers.py", line 507, in to_representation
+    for field in fields:
+  File "/Users/avee/workspace/dosier/bongo-restaurant/venv/lib/python3.9/site-packages/rest_framework/serializers.py", line 368, in _readable_fields
+    for field in self.fields.values():
+  File "/Users/avee/workspace/dosier/bongo-restaurant/venv/lib/python3.9/site-packages/django/utils/functional.py", line 57, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/Users/avee/workspace/dosier/bongo-restaurant/venv/lib/python3.9/site-packages/rest_framework/serializers.py", line 357, in fields
+    fields[key] = value
+  File "/Users/avee/workspace/dosier/bongo-restaurant/venv/lib/python3.9/site-packages/rest_framework/utils/serializer_helpers.py", line 169, in __setitem__
+    field.bind(field_name=key, parent=self.serializer)
+  File "/Users/avee/workspace/dosier/bongo-restaurant/venv/lib/python3.9/site-packages/rest_framework/fields.py", line 367, in bind
+    assert self.source != field_name, (
+AssertionError: It is redundant to specify `source='guid'` on field 'UUIDField' in serializer 'CurrentDayMenuSerializer', because it is the same as the field name. Remove the `source` keyword argument.
+Unauthorized: /api/v1/restaurant/menu/vote/c97a986b-3bc2-4009-9be7-aa41d251211c
+Internal Server Error: /api/v1/restaurant/menu/vote/c97a986b-3bc2-4009-9be7-aa41d251211c
+Traceback (most recent call last):
+  File "/Users/avee/workspace/dosier/bongo-restaurant/venv/lib/python3.9/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Users/avee/workspace/dosier/bongo-restaurant/venv/lib/python3.9/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/avee/workspace/dosier/bongo-restaurant/venv/lib/python3.9/site-packages/django/views/decorators/csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+  File "/Users/avee/workspace/dosier/bongo-restaurant/venv/lib/python3.9/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Users/avee/workspace/dosier/bongo-restaurant/venv/lib/python3.9/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/Users/avee/workspace/dosier/bongo-restaurant/venv/lib/python3.9/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/Users/avee/workspace/dosier/bongo-restaurant/venv/lib/python3.9/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/Users/avee/workspace/dosier/bongo-restaurant/venv/lib/python3.9/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Users/avee/workspace/dosier/bongo-restaurant/restaurant/views.py", line 124, in get
+    votes = Vote.obejcts.filter(menu=menu)
+AttributeError: type object 'Vote' has no attribute 'obejcts'
+Internal Server Error: /api/v1/restaurant/menu/vote/c97a986b-3bc2-4009-9be7-aa41d251211c
+Traceback (most recent call last):
+  File "/Users/avee/workspace/dosier/bongo-restaurant/venv/lib/python3.9/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Users/avee/workspace/dosier/bongo-restaurant/venv/lib/python3.9/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/avee/workspace/dosier/bongo-restaurant/venv/lib/python3.9/site-packages/django/views/decorators/csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+  File "/Users/avee/workspace/dosier/bongo-restaurant/venv/lib/python3.9/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Users/avee/workspace/dosier/bongo-restaurant/venv/lib/python3.9/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/Users/avee/workspace/dosier/bongo-restaurant/venv/lib/python3.9/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/Users/avee/workspace/dosier/bongo-restaurant/venv/lib/python3.9/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/Users/avee/workspace/dosier/bongo-restaurant/venv/lib/python3.9/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Users/avee/workspace/dosier/bongo-restaurant/restaurant/views.py", line 124, in get
+    votes = Vote.obejcts.filter(menu=menu)
+AttributeError: type object 'Vote' has no attribute 'obejcts'
+Internal Server Error: /api/v1/restaurant/menu/vote/c97a986b-3bc2-4009-9be7-aa41d251211c
+Traceback (most recent call last):
+  File "/Users/avee/workspace/dosier/bongo-restaurant/venv/lib/python3.9/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Users/avee/workspace/dosier/bongo-restaurant/venv/lib/python3.9/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/avee/workspace/dosier/bongo-restaurant/venv/lib/python3.9/site-packages/django/views/decorators/csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+  File "/Users/avee/workspace/dosier/bongo-restaurant/venv/lib/python3.9/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Users/avee/workspace/dosier/bongo-restaurant/venv/lib/python3.9/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/Users/avee/workspace/dosier/bongo-restaurant/venv/lib/python3.9/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/Users/avee/workspace/dosier/bongo-restaurant/venv/lib/python3.9/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/Users/avee/workspace/dosier/bongo-restaurant/venv/lib/python3.9/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Users/avee/workspace/dosier/bongo-restaurant/restaurant/views.py", line 142, in post
+    vote_by_the_user = Vote.objects.filter(
+  File "/Users/avee/workspace/dosier/bongo-restaurant/venv/lib/python3.9/site-packages/django/db/models/manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/Users/avee/workspace/dosier/bongo-restaurant/venv/lib/python3.9/site-packages/django/db/models/query.py", line 1436, in filter
+    return self._filter_or_exclude(False, args, kwargs)
+  File "/Users/avee/workspace/dosier/bongo-restaurant/venv/lib/python3.9/site-packages/django/db/models/query.py", line 1454, in _filter_or_exclude
+    clone._filter_or_exclude_inplace(negate, args, kwargs)
+  File "/Users/avee/workspace/dosier/bongo-restaurant/venv/lib/python3.9/site-packages/django/db/models/query.py", line 1461, in _filter_or_exclude_inplace
+    self._query.add_q(Q(*args, **kwargs))
+  File "/Users/avee/workspace/dosier/bongo-restaurant/venv/lib/python3.9/site-packages/django/db/models/sql/query.py", line 1545, in add_q
+    clause, _ = self._add_q(q_object, self.used_aliases)
+  File "/Users/avee/workspace/dosier/bongo-restaurant/venv/lib/python3.9/site-packages/django/db/models/sql/query.py", line 1576, in _add_q
+    child_clause, needed_inner = self.build_filter(
+  File "/Users/avee/workspace/dosier/bongo-restaurant/venv/lib/python3.9/site-packages/django/db/models/sql/query.py", line 1426, in build_filter
+    lookups, parts, reffed_expression = self.solve_lookup_type(arg, summarize)
+  File "/Users/avee/workspace/dosier/bongo-restaurant/venv/lib/python3.9/site-packages/django/db/models/sql/query.py", line 1236, in solve_lookup_type
+    _, field, _, lookup_parts = self.names_to_path(lookup_splitted, self.get_meta())
+  File "/Users/avee/workspace/dosier/bongo-restaurant/venv/lib/python3.9/site-packages/django/db/models/sql/query.py", line 1724, in names_to_path
+    raise FieldError(
+django.core.exceptions.FieldError: Cannot resolve keyword 'employee' into field. Choices are: created_at, guid, menu, menu_id, status, vote_by, vote_by_id
+Internal Server Error: /api/v1/restaurant/menu/vote/c97a986b-3bc2-4009-9be7-aa41d251211c
+Traceback (most recent call last):
+  File "/Users/avee/workspace/dosier/bongo-restaurant/venv/lib/python3.9/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Users/avee/workspace/dosier/bongo-restaurant/venv/lib/python3.9/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/avee/workspace/dosier/bongo-restaurant/venv/lib/python3.9/site-packages/django/views/decorators/csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+  File "/Users/avee/workspace/dosier/bongo-restaurant/venv/lib/python3.9/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Users/avee/workspace/dosier/bongo-restaurant/venv/lib/python3.9/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/Users/avee/workspace/dosier/bongo-restaurant/venv/lib/python3.9/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/Users/avee/workspace/dosier/bongo-restaurant/venv/lib/python3.9/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/Users/avee/workspace/dosier/bongo-restaurant/venv/lib/python3.9/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Users/avee/workspace/dosier/bongo-restaurant/restaurant/views.py", line 142, in post
+    vote_by_the_user = Vote.objects.filter(
+  File "/Users/avee/workspace/dosier/bongo-restaurant/venv/lib/python3.9/site-packages/django/db/models/manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/Users/avee/workspace/dosier/bongo-restaurant/venv/lib/python3.9/site-packages/django/db/models/query.py", line 1436, in filter
+    return self._filter_or_exclude(False, args, kwargs)
+  File "/Users/avee/workspace/dosier/bongo-restaurant/venv/lib/python3.9/site-packages/django/db/models/query.py", line 1454, in _filter_or_exclude
+    clone._filter_or_exclude_inplace(negate, args, kwargs)
+  File "/Users/avee/workspace/dosier/bongo-restaurant/venv/lib/python3.9/site-packages/django/db/models/query.py", line 1461, in _filter_or_exclude_inplace
+    self._query.add_q(Q(*args, **kwargs))
+  File "/Users/avee/workspace/dosier/bongo-restaurant/venv/lib/python3.9/site-packages/django/db/models/sql/query.py", line 1545, in add_q
+    clause, _ = self._add_q(q_object, self.used_aliases)
+  File "/Users/avee/workspace/dosier/bongo-restaurant/venv/lib/python3.9/site-packages/django/db/models/sql/query.py", line 1576, in _add_q
+    child_clause, needed_inner = self.build_filter(
+  File "/Users/avee/workspace/dosier/bongo-restaurant/venv/lib/python3.9/site-packages/django/db/models/sql/query.py", line 1426, in build_filter
+    lookups, parts, reffed_expression = self.solve_lookup_type(arg, summarize)
+  File "/Users/avee/workspace/dosier/bongo-restaurant/venv/lib/python3.9/site-packages/django/db/models/sql/query.py", line 1236, in solve_lookup_type
+    _, field, _, lookup_parts = self.names_to_path(lookup_splitted, self.get_meta())
+  File "/Users/avee/workspace/dosier/bongo-restaurant/venv/lib/python3.9/site-packages/django/db/models/sql/query.py", line 1724, in names_to_path
+    raise FieldError(
+django.core.exceptions.FieldError: Cannot resolve keyword 'employee' into field. Choices are: created_at, guid, menu, menu_id, status, vote_by, vote_by_id
+Internal Server Error: /api/v1/restaurant/menu/vote/c97a986b-3bc2-4009-9be7-aa41d251211c
+Traceback (most recent call last):
+  File "/Users/avee/workspace/dosier/bongo-restaurant/venv/lib/python3.9/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Users/avee/workspace/dosier/bongo-restaurant/venv/lib/python3.9/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/avee/workspace/dosier/bongo-restaurant/venv/lib/python3.9/site-packages/django/views/decorators/csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+  File "/Users/avee/workspace/dosier/bongo-restaurant/venv/lib/python3.9/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Users/avee/workspace/dosier/bongo-restaurant/venv/lib/python3.9/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/Users/avee/workspace/dosier/bongo-restaurant/venv/lib/python3.9/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/Users/avee/workspace/dosier/bongo-restaurant/venv/lib/python3.9/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/Users/avee/workspace/dosier/bongo-restaurant/venv/lib/python3.9/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Users/avee/workspace/dosier/bongo-restaurant/restaurant/views.py", line 142, in post
+    vote_by_the_user = Vote.objects.filter(
+  File "/Users/avee/workspace/dosier/bongo-restaurant/venv/lib/python3.9/site-packages/django/db/models/manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/Users/avee/workspace/dosier/bongo-restaurant/venv/lib/python3.9/site-packages/django/db/models/query.py", line 1436, in filter
+    return self._filter_or_exclude(False, args, kwargs)
+  File "/Users/avee/workspace/dosier/bongo-restaurant/venv/lib/python3.9/site-packages/django/db/models/query.py", line 1454, in _filter_or_exclude
+    clone._filter_or_exclude_inplace(negate, args, kwargs)
+  File "/Users/avee/workspace/dosier/bongo-restaurant/venv/lib/python3.9/site-packages/django/db/models/query.py", line 1461, in _filter_or_exclude_inplace
+    self._query.add_q(Q(*args, **kwargs))
+  File "/Users/avee/workspace/dosier/bongo-restaurant/venv/lib/python3.9/site-packages/django/db/models/sql/query.py", line 1545, in add_q
+    clause, _ = self._add_q(q_object, self.used_aliases)
+  File "/Users/avee/workspace/dosier/bongo-restaurant/venv/lib/python3.9/site-packages/django/db/models/sql/query.py", line 1576, in _add_q
+    child_clause, needed_inner = self.build_filter(
+  File "/Users/avee/workspace/dosier/bongo-restaurant/venv/lib/python3.9/site-packages/django/db/models/sql/query.py", line 1426, in build_filter
+    lookups, parts, reffed_expression = self.solve_lookup_type(arg, summarize)
+  File "/Users/avee/workspace/dosier/bongo-restaurant/venv/lib/python3.9/site-packages/django/db/models/sql/query.py", line 1236, in solve_lookup_type
+    _, field, _, lookup_parts = self.names_to_path(lookup_splitted, self.get_meta())
+  File "/Users/avee/workspace/dosier/bongo-restaurant/venv/lib/python3.9/site-packages/django/db/models/sql/query.py", line 1724, in names_to_path
+    raise FieldError(
+django.core.exceptions.FieldError: Cannot resolve keyword 'employee' into field. Choices are: created_at, guid, menu, menu_id, status, vote_by, vote_by_id
+Internal Server Error: /api/v1/restaurant/menu/vote/c97a986b-3bc2-4009-9be7-aa41d251211c
+Traceback (most recent call last):
+  File "/Users/avee/workspace/dosier/bongo-restaurant/venv/lib/python3.9/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Users/avee/workspace/dosier/bongo-restaurant/venv/lib/python3.9/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/avee/workspace/dosier/bongo-restaurant/venv/lib/python3.9/site-packages/django/views/decorators/csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+  File "/Users/avee/workspace/dosier/bongo-restaurant/venv/lib/python3.9/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Users/avee/workspace/dosier/bongo-restaurant/venv/lib/python3.9/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/Users/avee/workspace/dosier/bongo-restaurant/venv/lib/python3.9/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/Users/avee/workspace/dosier/bongo-restaurant/venv/lib/python3.9/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/Users/avee/workspace/dosier/bongo-restaurant/venv/lib/python3.9/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Users/avee/workspace/dosier/bongo-restaurant/restaurant/views.py", line 142, in post
+    vote_by_the_user = Vote.objects.filter(
+  File "/Users/avee/workspace/dosier/bongo-restaurant/venv/lib/python3.9/site-packages/django/db/models/manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/Users/avee/workspace/dosier/bongo-restaurant/venv/lib/python3.9/site-packages/django/db/models/query.py", line 1436, in filter
+    return self._filter_or_exclude(False, args, kwargs)
+  File "/Users/avee/workspace/dosier/bongo-restaurant/venv/lib/python3.9/site-packages/django/db/models/query.py", line 1454, in _filter_or_exclude
+    clone._filter_or_exclude_inplace(negate, args, kwargs)
+  File "/Users/avee/workspace/dosier/bongo-restaurant/venv/lib/python3.9/site-packages/django/db/models/query.py", line 1461, in _filter_or_exclude_inplace
+    self._query.add_q(Q(*args, **kwargs))
+  File "/Users/avee/workspace/dosier/bongo-restaurant/venv/lib/python3.9/site-packages/django/db/models/sql/query.py", line 1545, in add_q
+    clause, _ = self._add_q(q_object, self.used_aliases)
+  File "/Users/avee/workspace/dosier/bongo-restaurant/venv/lib/python3.9/site-packages/django/db/models/sql/query.py", line 1576, in _add_q
+    child_clause, needed_inner = self.build_filter(
+  File "/Users/avee/workspace/dosier/bongo-restaurant/venv/lib/python3.9/site-packages/django/db/models/sql/query.py", line 1426, in build_filter
+    lookups, parts, reffed_expression = self.solve_lookup_type(arg, summarize)
+  File "/Users/avee/workspace/dosier/bongo-restaurant/venv/lib/python3.9/site-packages/django/db/models/sql/query.py", line 1236, in solve_lookup_type
+    _, field, _, lookup_parts = self.names_to_path(lookup_splitted, self.get_meta())
+  File "/Users/avee/workspace/dosier/bongo-restaurant/venv/lib/python3.9/site-packages/django/db/models/sql/query.py", line 1724, in names_to_path
+    raise FieldError(
+django.core.exceptions.FieldError: Cannot resolve keyword 'employee' into field. Choices are: created_at, guid, menu, menu_id, status, vote_by, vote_by_id
+Internal Server Error: /api/v1/restaurant/menu/vote/c97a986b-3bc2-4009-9be7-aa41d251211c
+Traceback (most recent call last):
+  File "/Users/avee/workspace/dosier/bongo-restaurant/venv/lib/python3.9/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Users/avee/workspace/dosier/bongo-restaurant/venv/lib/python3.9/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/avee/workspace/dosier/bongo-restaurant/venv/lib/python3.9/site-packages/django/views/decorators/csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+  File "/Users/avee/workspace/dosier/bongo-restaurant/venv/lib/python3.9/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Users/avee/workspace/dosier/bongo-restaurant/venv/lib/python3.9/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/Users/avee/workspace/dosier/bongo-restaurant/venv/lib/python3.9/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/Users/avee/workspace/dosier/bongo-restaurant/venv/lib/python3.9/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/Users/avee/workspace/dosier/bongo-restaurant/venv/lib/python3.9/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Users/avee/workspace/dosier/bongo-restaurant/restaurant/views.py", line 142, in post
+    vote_by_the_user = Vote.objects.filter(
+  File "/Users/avee/workspace/dosier/bongo-restaurant/venv/lib/python3.9/site-packages/django/db/models/manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/Users/avee/workspace/dosier/bongo-restaurant/venv/lib/python3.9/site-packages/django/db/models/query.py", line 1436, in filter
+    return self._filter_or_exclude(False, args, kwargs)
+  File "/Users/avee/workspace/dosier/bongo-restaurant/venv/lib/python3.9/site-packages/django/db/models/query.py", line 1454, in _filter_or_exclude
+    clone._filter_or_exclude_inplace(negate, args, kwargs)
+  File "/Users/avee/workspace/dosier/bongo-restaurant/venv/lib/python3.9/site-packages/django/db/models/query.py", line 1461, in _filter_or_exclude_inplace
+    self._query.add_q(Q(*args, **kwargs))
+  File "/Users/avee/workspace/dosier/bongo-restaurant/venv/lib/python3.9/site-packages/django/db/models/sql/query.py", line 1545, in add_q
+    clause, _ = self._add_q(q_object, self.used_aliases)
+  File "/Users/avee/workspace/dosier/bongo-restaurant/venv/lib/python3.9/site-packages/django/db/models/sql/query.py", line 1576, in _add_q
+    child_clause, needed_inner = self.build_filter(
+  File "/Users/avee/workspace/dosier/bongo-restaurant/venv/lib/python3.9/site-packages/django/db/models/sql/query.py", line 1426, in build_filter
+    lookups, parts, reffed_expression = self.solve_lookup_type(arg, summarize)
+  File "/Users/avee/workspace/dosier/bongo-restaurant/venv/lib/python3.9/site-packages/django/db/models/sql/query.py", line 1236, in solve_lookup_type
+    _, field, _, lookup_parts = self.names_to_path(lookup_splitted, self.get_meta())
+  File "/Users/avee/workspace/dosier/bongo-restaurant/venv/lib/python3.9/site-packages/django/db/models/sql/query.py", line 1724, in names_to_path
+    raise FieldError(
+django.core.exceptions.FieldError: Cannot resolve keyword 'employee' into field. Choices are: created_at, guid, menu, menu_id, status, vote_by, vote_by_id
+Bad Request: /api/v1/restaurant/menu/vote/c97a986b-3bc2-4009-9be7-aa41d251211c
+Bad Request: /api/v1/restaurant/menu/vote/c97a986b-3bc2-4009-9be7-aa41d251211c
+Internal Server Error: /api/v1/restaurant/menu/vote/c97a986b-3bc2-4009-9be7-aa41d251211c
+Traceback (most recent call last):
+  File "/Users/avee/workspace/dosier/bongo-restaurant/venv/lib/python3.9/site-packages/django/db/backends/utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+  File "/Users/avee/workspace/dosier/bongo-restaurant/venv/lib/python3.9/site-packages/django/db/backends/sqlite3/base.py", line 328, in execute
+    return super().execute(query, params)
+sqlite3.IntegrityError: NOT NULL constraint failed: restaurant_vote.vote_by_id
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/avee/workspace/dosier/bongo-restaurant/venv/lib/python3.9/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Users/avee/workspace/dosier/bongo-restaurant/venv/lib/python3.9/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/avee/workspace/dosier/bongo-restaurant/venv/lib/python3.9/site-packages/django/views/decorators/csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+  File "/Users/avee/workspace/dosier/bongo-restaurant/venv/lib/python3.9/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Users/avee/workspace/dosier/bongo-restaurant/venv/lib/python3.9/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/Users/avee/workspace/dosier/bongo-restaurant/venv/lib/python3.9/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/Users/avee/workspace/dosier/bongo-restaurant/venv/lib/python3.9/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/Users/avee/workspace/dosier/bongo-restaurant/venv/lib/python3.9/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Users/avee/workspace/dosier/bongo-restaurant/restaurant/views.py", line 156, in post
+    vote_serializer.save()
+  File "/Users/avee/workspace/dosier/bongo-restaurant/venv/lib/python3.9/site-packages/rest_framework/serializers.py", line 212, in save
+    self.instance = self.create(validated_data)
+  File "/Users/avee/workspace/dosier/bongo-restaurant/venv/lib/python3.9/site-packages/rest_framework/serializers.py", line 962, in create
+    instance = ModelClass._default_manager.create(**validated_data)
+  File "/Users/avee/workspace/dosier/bongo-restaurant/venv/lib/python3.9/site-packages/django/db/models/manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/Users/avee/workspace/dosier/bongo-restaurant/venv/lib/python3.9/site-packages/django/db/models/query.py", line 658, in create
+    obj.save(force_insert=True, using=self.db)
+  File "/Users/avee/workspace/dosier/bongo-restaurant/venv/lib/python3.9/site-packages/django/db/models/base.py", line 814, in save
+    self.save_base(
+  File "/Users/avee/workspace/dosier/bongo-restaurant/venv/lib/python3.9/site-packages/django/db/models/base.py", line 877, in save_base
+    updated = self._save_table(
+  File "/Users/avee/workspace/dosier/bongo-restaurant/venv/lib/python3.9/site-packages/django/db/models/base.py", line 1020, in _save_table
+    results = self._do_insert(
+  File "/Users/avee/workspace/dosier/bongo-restaurant/venv/lib/python3.9/site-packages/django/db/models/base.py", line 1061, in _do_insert
+    return manager._insert(
+  File "/Users/avee/workspace/dosier/bongo-restaurant/venv/lib/python3.9/site-packages/django/db/models/manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/Users/avee/workspace/dosier/bongo-restaurant/venv/lib/python3.9/site-packages/django/db/models/query.py", line 1805, in _insert
+    return query.get_compiler(using=using).execute_sql(returning_fields)
+  File "/Users/avee/workspace/dosier/bongo-restaurant/venv/lib/python3.9/site-packages/django/db/models/sql/compiler.py", line 1822, in execute_sql
+    cursor.execute(sql, params)
+  File "/Users/avee/workspace/dosier/bongo-restaurant/venv/lib/python3.9/site-packages/django/db/backends/utils.py", line 102, in execute
+    return super().execute(sql, params)
+  File "/Users/avee/workspace/dosier/bongo-restaurant/venv/lib/python3.9/site-packages/django/db/backends/utils.py", line 67, in execute
+    return self._execute_with_wrappers(
+  File "/Users/avee/workspace/dosier/bongo-restaurant/venv/lib/python3.9/site-packages/django/db/backends/utils.py", line 80, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "/Users/avee/workspace/dosier/bongo-restaurant/venv/lib/python3.9/site-packages/django/db/backends/utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+  File "/Users/avee/workspace/dosier/bongo-restaurant/venv/lib/python3.9/site-packages/django/db/utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "/Users/avee/workspace/dosier/bongo-restaurant/venv/lib/python3.9/site-packages/django/db/backends/utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+  File "/Users/avee/workspace/dosier/bongo-restaurant/venv/lib/python3.9/site-packages/django/db/backends/sqlite3/base.py", line 328, in execute
+    return super().execute(query, params)
+django.db.utils.IntegrityError: NOT NULL constraint failed: restaurant_vote.vote_by_id
+Internal Server Error: /api/v1/restaurant/menu/vote/c97a986b-3bc2-4009-9be7-aa41d251211c
+Traceback (most recent call last):
+  File "/Users/avee/workspace/dosier/bongo-restaurant/venv/lib/python3.9/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Users/avee/workspace/dosier/bongo-restaurant/venv/lib/python3.9/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/avee/workspace/dosier/bongo-restaurant/venv/lib/python3.9/site-packages/django/views/decorators/csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+  File "/Users/avee/workspace/dosier/bongo-restaurant/venv/lib/python3.9/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Users/avee/workspace/dosier/bongo-restaurant/venv/lib/python3.9/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/Users/avee/workspace/dosier/bongo-restaurant/venv/lib/python3.9/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/Users/avee/workspace/dosier/bongo-restaurant/venv/lib/python3.9/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/Users/avee/workspace/dosier/bongo-restaurant/venv/lib/python3.9/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Users/avee/workspace/dosier/bongo-restaurant/restaurant/views.py", line 153, in post
+    payload = {"menu": menu.id, "vote_by": request.user}
+AttributeError: 'Menu' object has no attribute 'id'
+Internal Server Error: /api/v1/restaurant/menu/vote/c97a986b-3bc2-4009-9be7-aa41d251211c
+Traceback (most recent call last):
+  File "/Users/avee/workspace/dosier/bongo-restaurant/venv/lib/python3.9/site-packages/django/db/backends/utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+  File "/Users/avee/workspace/dosier/bongo-restaurant/venv/lib/python3.9/site-packages/django/db/backends/sqlite3/base.py", line 328, in execute
+    return super().execute(query, params)
+sqlite3.IntegrityError: NOT NULL constraint failed: restaurant_vote.vote_by_id
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/avee/workspace/dosier/bongo-restaurant/venv/lib/python3.9/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Users/avee/workspace/dosier/bongo-restaurant/venv/lib/python3.9/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/avee/workspace/dosier/bongo-restaurant/venv/lib/python3.9/site-packages/django/views/decorators/csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+  File "/Users/avee/workspace/dosier/bongo-restaurant/venv/lib/python3.9/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Users/avee/workspace/dosier/bongo-restaurant/venv/lib/python3.9/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/Users/avee/workspace/dosier/bongo-restaurant/venv/lib/python3.9/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/Users/avee/workspace/dosier/bongo-restaurant/venv/lib/python3.9/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/Users/avee/workspace/dosier/bongo-restaurant/venv/lib/python3.9/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Users/avee/workspace/dosier/bongo-restaurant/restaurant/views.py", line 156, in post
+    vote_serializer.save()
+  File "/Users/avee/workspace/dosier/bongo-restaurant/venv/lib/python3.9/site-packages/rest_framework/serializers.py", line 212, in save
+    self.instance = self.create(validated_data)
+  File "/Users/avee/workspace/dosier/bongo-restaurant/venv/lib/python3.9/site-packages/rest_framework/serializers.py", line 962, in create
+    instance = ModelClass._default_manager.create(**validated_data)
+  File "/Users/avee/workspace/dosier/bongo-restaurant/venv/lib/python3.9/site-packages/django/db/models/manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/Users/avee/workspace/dosier/bongo-restaurant/venv/lib/python3.9/site-packages/django/db/models/query.py", line 658, in create
+    obj.save(force_insert=True, using=self.db)
+  File "/Users/avee/workspace/dosier/bongo-restaurant/venv/lib/python3.9/site-packages/django/db/models/base.py", line 814, in save
+    self.save_base(
+  File "/Users/avee/workspace/dosier/bongo-restaurant/venv/lib/python3.9/site-packages/django/db/models/base.py", line 877, in save_base
+    updated = self._save_table(
+  File "/Users/avee/workspace/dosier/bongo-restaurant/venv/lib/python3.9/site-packages/django/db/models/base.py", line 1020, in _save_table
+    results = self._do_insert(
+  File "/Users/avee/workspace/dosier/bongo-restaurant/venv/lib/python3.9/site-packages/django/db/models/base.py", line 1061, in _do_insert
+    return manager._insert(
+  File "/Users/avee/workspace/dosier/bongo-restaurant/venv/lib/python3.9/site-packages/django/db/models/manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/Users/avee/workspace/dosier/bongo-restaurant/venv/lib/python3.9/site-packages/django/db/models/query.py", line 1805, in _insert
+    return query.get_compiler(using=using).execute_sql(returning_fields)
+  File "/Users/avee/workspace/dosier/bongo-restaurant/venv/lib/python3.9/site-packages/django/db/models/sql/compiler.py", line 1822, in execute_sql
+    cursor.execute(sql, params)
+  File "/Users/avee/workspace/dosier/bongo-restaurant/venv/lib/python3.9/site-packages/django/db/backends/utils.py", line 102, in execute
+    return super().execute(sql, params)
+  File "/Users/avee/workspace/dosier/bongo-restaurant/venv/lib/python3.9/site-packages/django/db/backends/utils.py", line 67, in execute
+    return self._execute_with_wrappers(
+  File "/Users/avee/workspace/dosier/bongo-restaurant/venv/lib/python3.9/site-packages/django/db/backends/utils.py", line 80, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "/Users/avee/workspace/dosier/bongo-restaurant/venv/lib/python3.9/site-packages/django/db/backends/utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+  File "/Users/avee/workspace/dosier/bongo-restaurant/venv/lib/python3.9/site-packages/django/db/utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "/Users/avee/workspace/dosier/bongo-restaurant/venv/lib/python3.9/site-packages/django/db/backends/utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+  File "/Users/avee/workspace/dosier/bongo-restaurant/venv/lib/python3.9/site-packages/django/db/backends/sqlite3/base.py", line 328, in execute
+    return super().execute(query, params)
+django.db.utils.IntegrityError: NOT NULL constraint failed: restaurant_vote.vote_by_id
+Internal Server Error: /api/v1/restaurant/menu/vote/c97a986b-3bc2-4009-9be7-aa41d251211c
+Traceback (most recent call last):
+  File "/Users/avee/workspace/dosier/bongo-restaurant/venv/lib/python3.9/site-packages/django/db/backends/utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+  File "/Users/avee/workspace/dosier/bongo-restaurant/venv/lib/python3.9/site-packages/django/db/backends/sqlite3/base.py", line 328, in execute
+    return super().execute(query, params)
+sqlite3.IntegrityError: NOT NULL constraint failed: restaurant_vote.vote_by_id
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/avee/workspace/dosier/bongo-restaurant/venv/lib/python3.9/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Users/avee/workspace/dosier/bongo-restaurant/venv/lib/python3.9/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/avee/workspace/dosier/bongo-restaurant/venv/lib/python3.9/site-packages/django/views/decorators/csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+  File "/Users/avee/workspace/dosier/bongo-restaurant/venv/lib/python3.9/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Users/avee/workspace/dosier/bongo-restaurant/venv/lib/python3.9/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/Users/avee/workspace/dosier/bongo-restaurant/venv/lib/python3.9/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/Users/avee/workspace/dosier/bongo-restaurant/venv/lib/python3.9/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/Users/avee/workspace/dosier/bongo-restaurant/venv/lib/python3.9/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Users/avee/workspace/dosier/bongo-restaurant/restaurant/views.py", line 156, in post
+    vote_serializer.save()
+  File "/Users/avee/workspace/dosier/bongo-restaurant/venv/lib/python3.9/site-packages/rest_framework/serializers.py", line 212, in save
+    self.instance = self.create(validated_data)
+  File "/Users/avee/workspace/dosier/bongo-restaurant/venv/lib/python3.9/site-packages/rest_framework/serializers.py", line 962, in create
+    instance = ModelClass._default_manager.create(**validated_data)
+  File "/Users/avee/workspace/dosier/bongo-restaurant/venv/lib/python3.9/site-packages/django/db/models/manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/Users/avee/workspace/dosier/bongo-restaurant/venv/lib/python3.9/site-packages/django/db/models/query.py", line 658, in create
+    obj.save(force_insert=True, using=self.db)
+  File "/Users/avee/workspace/dosier/bongo-restaurant/venv/lib/python3.9/site-packages/django/db/models/base.py", line 814, in save
+    self.save_base(
+  File "/Users/avee/workspace/dosier/bongo-restaurant/venv/lib/python3.9/site-packages/django/db/models/base.py", line 877, in save_base
+    updated = self._save_table(
+  File "/Users/avee/workspace/dosier/bongo-restaurant/venv/lib/python3.9/site-packages/django/db/models/base.py", line 1020, in _save_table
+    results = self._do_insert(
+  File "/Users/avee/workspace/dosier/bongo-restaurant/venv/lib/python3.9/site-packages/django/db/models/base.py", line 1061, in _do_insert
+    return manager._insert(
+  File "/Users/avee/workspace/dosier/bongo-restaurant/venv/lib/python3.9/site-packages/django/db/models/manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/Users/avee/workspace/dosier/bongo-restaurant/venv/lib/python3.9/site-packages/django/db/models/query.py", line 1805, in _insert
+    return query.get_compiler(using=using).execute_sql(returning_fields)
+  File "/Users/avee/workspace/dosier/bongo-restaurant/venv/lib/python3.9/site-packages/django/db/models/sql/compiler.py", line 1822, in execute_sql
+    cursor.execute(sql, params)
+  File "/Users/avee/workspace/dosier/bongo-restaurant/venv/lib/python3.9/site-packages/django/db/backends/utils.py", line 102, in execute
+    return super().execute(sql, params)
+  File "/Users/avee/workspace/dosier/bongo-restaurant/venv/lib/python3.9/site-packages/django/db/backends/utils.py", line 67, in execute
+    return self._execute_with_wrappers(
+  File "/Users/avee/workspace/dosier/bongo-restaurant/venv/lib/python3.9/site-packages/django/db/backends/utils.py", line 80, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "/Users/avee/workspace/dosier/bongo-restaurant/venv/lib/python3.9/site-packages/django/db/backends/utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+  File "/Users/avee/workspace/dosier/bongo-restaurant/venv/lib/python3.9/site-packages/django/db/utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "/Users/avee/workspace/dosier/bongo-restaurant/venv/lib/python3.9/site-packages/django/db/backends/utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+  File "/Users/avee/workspace/dosier/bongo-restaurant/venv/lib/python3.9/site-packages/django/db/backends/sqlite3/base.py", line 328, in execute
+    return super().execute(query, params)
+django.db.utils.IntegrityError: NOT NULL constraint failed: restaurant_vote.vote_by_id
+Bad Request: /api/v1/restaurant/menu/vote/c97a986b-3bc2-4009-9be7-aa41d251211c
+Internal Server Error: /api/v1/restaurant/menu/vote/c97a986b-3bc2-4009-9be7-aa41d251211c
+Traceback (most recent call last):
+  File "/Users/avee/workspace/dosier/bongo-restaurant/venv/lib/python3.9/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Users/avee/workspace/dosier/bongo-restaurant/venv/lib/python3.9/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/avee/workspace/dosier/bongo-restaurant/venv/lib/python3.9/site-packages/django/views/decorators/csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+  File "/Users/avee/workspace/dosier/bongo-restaurant/venv/lib/python3.9/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Users/avee/workspace/dosier/bongo-restaurant/venv/lib/python3.9/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/Users/avee/workspace/dosier/bongo-restaurant/venv/lib/python3.9/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/Users/avee/workspace/dosier/bongo-restaurant/venv/lib/python3.9/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/Users/avee/workspace/dosier/bongo-restaurant/venv/lib/python3.9/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Users/avee/workspace/dosier/bongo-restaurant/restaurant/views.py", line 153, in post
+    vote_serializer = VoteSerializer(data={"menu": uuid.uuid4(menu.guid), "vote_by": request.user})
+TypeError: uuid4() takes 0 positional arguments but 1 was given
+Bad Request: /api/v1/restaurant/menu/vote/c97a986b-3bc2-4009-9be7-aa41d251211c
+Internal Server Error: /api/v1/restaurant/menu/vote/c97a986b-3bc2-4009-9be7-aa41d251211c
+Traceback (most recent call last):
+  File "/Users/avee/workspace/dosier/bongo-restaurant/venv/lib/python3.9/site-packages/django/db/backends/utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+  File "/Users/avee/workspace/dosier/bongo-restaurant/venv/lib/python3.9/site-packages/django/db/backends/sqlite3/base.py", line 328, in execute
+    return super().execute(query, params)
+sqlite3.IntegrityError: NOT NULL constraint failed: restaurant_vote.vote_by_id
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/avee/workspace/dosier/bongo-restaurant/venv/lib/python3.9/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Users/avee/workspace/dosier/bongo-restaurant/venv/lib/python3.9/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/avee/workspace/dosier/bongo-restaurant/venv/lib/python3.9/site-packages/django/views/decorators/csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+  File "/Users/avee/workspace/dosier/bongo-restaurant/venv/lib/python3.9/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Users/avee/workspace/dosier/bongo-restaurant/venv/lib/python3.9/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/Users/avee/workspace/dosier/bongo-restaurant/venv/lib/python3.9/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/Users/avee/workspace/dosier/bongo-restaurant/venv/lib/python3.9/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/Users/avee/workspace/dosier/bongo-restaurant/venv/lib/python3.9/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Users/avee/workspace/dosier/bongo-restaurant/restaurant/views.py", line 155, in post
+    vote_serializer.save()
+  File "/Users/avee/workspace/dosier/bongo-restaurant/venv/lib/python3.9/site-packages/rest_framework/serializers.py", line 212, in save
+    self.instance = self.create(validated_data)
+  File "/Users/avee/workspace/dosier/bongo-restaurant/venv/lib/python3.9/site-packages/rest_framework/serializers.py", line 962, in create
+    instance = ModelClass._default_manager.create(**validated_data)
+  File "/Users/avee/workspace/dosier/bongo-restaurant/venv/lib/python3.9/site-packages/django/db/models/manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/Users/avee/workspace/dosier/bongo-restaurant/venv/lib/python3.9/site-packages/django/db/models/query.py", line 658, in create
+    obj.save(force_insert=True, using=self.db)
+  File "/Users/avee/workspace/dosier/bongo-restaurant/venv/lib/python3.9/site-packages/django/db/models/base.py", line 814, in save
+    self.save_base(
+  File "/Users/avee/workspace/dosier/bongo-restaurant/venv/lib/python3.9/site-packages/django/db/models/base.py", line 877, in save_base
+    updated = self._save_table(
+  File "/Users/avee/workspace/dosier/bongo-restaurant/venv/lib/python3.9/site-packages/django/db/models/base.py", line 1020, in _save_table
+    results = self._do_insert(
+  File "/Users/avee/workspace/dosier/bongo-restaurant/venv/lib/python3.9/site-packages/django/db/models/base.py", line 1061, in _do_insert
+    return manager._insert(
+  File "/Users/avee/workspace/dosier/bongo-restaurant/venv/lib/python3.9/site-packages/django/db/models/manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/Users/avee/workspace/dosier/bongo-restaurant/venv/lib/python3.9/site-packages/django/db/models/query.py", line 1805, in _insert
+    return query.get_compiler(using=using).execute_sql(returning_fields)
+  File "/Users/avee/workspace/dosier/bongo-restaurant/venv/lib/python3.9/site-packages/django/db/models/sql/compiler.py", line 1822, in execute_sql
+    cursor.execute(sql, params)
+  File "/Users/avee/workspace/dosier/bongo-restaurant/venv/lib/python3.9/site-packages/django/db/backends/utils.py", line 102, in execute
+    return super().execute(sql, params)
+  File "/Users/avee/workspace/dosier/bongo-restaurant/venv/lib/python3.9/site-packages/django/db/backends/utils.py", line 67, in execute
+    return self._execute_with_wrappers(
+  File "/Users/avee/workspace/dosier/bongo-restaurant/venv/lib/python3.9/site-packages/django/db/backends/utils.py", line 80, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "/Users/avee/workspace/dosier/bongo-restaurant/venv/lib/python3.9/site-packages/django/db/backends/utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+  File "/Users/avee/workspace/dosier/bongo-restaurant/venv/lib/python3.9/site-packages/django/db/utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "/Users/avee/workspace/dosier/bongo-restaurant/venv/lib/python3.9/site-packages/django/db/backends/utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+  File "/Users/avee/workspace/dosier/bongo-restaurant/venv/lib/python3.9/site-packages/django/db/backends/sqlite3/base.py", line 328, in execute
+    return super().execute(query, params)
+django.db.utils.IntegrityError: NOT NULL constraint failed: restaurant_vote.vote_by_id
+Internal Server Error: /api/v1/restaurant/menu/vote/c97a986b-3bc2-4009-9be7-aa41d251211c
+Traceback (most recent call last):
+  File "/Users/avee/workspace/dosier/bongo-restaurant/venv/lib/python3.9/site-packages/django/db/backends/utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+  File "/Users/avee/workspace/dosier/bongo-restaurant/venv/lib/python3.9/site-packages/django/db/backends/sqlite3/base.py", line 328, in execute
+    return super().execute(query, params)
+sqlite3.IntegrityError: NOT NULL constraint failed: restaurant_vote.vote_by_id
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/avee/workspace/dosier/bongo-restaurant/venv/lib/python3.9/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Users/avee/workspace/dosier/bongo-restaurant/venv/lib/python3.9/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/avee/workspace/dosier/bongo-restaurant/venv/lib/python3.9/site-packages/django/views/decorators/csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+  File "/Users/avee/workspace/dosier/bongo-restaurant/venv/lib/python3.9/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Users/avee/workspace/dosier/bongo-restaurant/venv/lib/python3.9/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/Users/avee/workspace/dosier/bongo-restaurant/venv/lib/python3.9/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/Users/avee/workspace/dosier/bongo-restaurant/venv/lib/python3.9/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/Users/avee/workspace/dosier/bongo-restaurant/venv/lib/python3.9/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Users/avee/workspace/dosier/bongo-restaurant/restaurant/views.py", line 155, in post
+    vote_serializer.save()
+  File "/Users/avee/workspace/dosier/bongo-restaurant/venv/lib/python3.9/site-packages/rest_framework/serializers.py", line 212, in save
+    self.instance = self.create(validated_data)
+  File "/Users/avee/workspace/dosier/bongo-restaurant/venv/lib/python3.9/site-packages/rest_framework/serializers.py", line 962, in create
+    instance = ModelClass._default_manager.create(**validated_data)
+  File "/Users/avee/workspace/dosier/bongo-restaurant/venv/lib/python3.9/site-packages/django/db/models/manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/Users/avee/workspace/dosier/bongo-restaurant/venv/lib/python3.9/site-packages/django/db/models/query.py", line 658, in create
+    obj.save(force_insert=True, using=self.db)
+  File "/Users/avee/workspace/dosier/bongo-restaurant/venv/lib/python3.9/site-packages/django/db/models/base.py", line 814, in save
+    self.save_base(
+  File "/Users/avee/workspace/dosier/bongo-restaurant/venv/lib/python3.9/site-packages/django/db/models/base.py", line 877, in save_base
+    updated = self._save_table(
+  File "/Users/avee/workspace/dosier/bongo-restaurant/venv/lib/python3.9/site-packages/django/db/models/base.py", line 1020, in _save_table
+    results = self._do_insert(
+  File "/Users/avee/workspace/dosier/bongo-restaurant/venv/lib/python3.9/site-packages/django/db/models/base.py", line 1061, in _do_insert
+    return manager._insert(
+  File "/Users/avee/workspace/dosier/bongo-restaurant/venv/lib/python3.9/site-packages/django/db/models/manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/Users/avee/workspace/dosier/bongo-restaurant/venv/lib/python3.9/site-packages/django/db/models/query.py", line 1805, in _insert
+    return query.get_compiler(using=using).execute_sql(returning_fields)
+  File "/Users/avee/workspace/dosier/bongo-restaurant/venv/lib/python3.9/site-packages/django/db/models/sql/compiler.py", line 1822, in execute_sql
+    cursor.execute(sql, params)
+  File "/Users/avee/workspace/dosier/bongo-restaurant/venv/lib/python3.9/site-packages/django/db/backends/utils.py", line 102, in execute
+    return super().execute(sql, params)
+  File "/Users/avee/workspace/dosier/bongo-restaurant/venv/lib/python3.9/site-packages/django/db/backends/utils.py", line 67, in execute
+    return self._execute_with_wrappers(
+  File "/Users/avee/workspace/dosier/bongo-restaurant/venv/lib/python3.9/site-packages/django/db/backends/utils.py", line 80, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "/Users/avee/workspace/dosier/bongo-restaurant/venv/lib/python3.9/site-packages/django/db/backends/utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+  File "/Users/avee/workspace/dosier/bongo-restaurant/venv/lib/python3.9/site-packages/django/db/utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "/Users/avee/workspace/dosier/bongo-restaurant/venv/lib/python3.9/site-packages/django/db/backends/utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+  File "/Users/avee/workspace/dosier/bongo-restaurant/venv/lib/python3.9/site-packages/django/db/backends/sqlite3/base.py", line 328, in execute
+    return super().execute(query, params)
+django.db.utils.IntegrityError: NOT NULL constraint failed: restaurant_vote.vote_by_id
+Internal Server Error: /api/v1/restaurant/menu/vote/c97a986b-3bc2-4009-9be7-aa41d251211c
+Traceback (most recent call last):
+  File "/Users/avee/workspace/dosier/bongo-restaurant/venv/lib/python3.9/site-packages/django/db/backends/utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+  File "/Users/avee/workspace/dosier/bongo-restaurant/venv/lib/python3.9/site-packages/django/db/backends/sqlite3/base.py", line 328, in execute
+    return super().execute(query, params)
+sqlite3.IntegrityError: NOT NULL constraint failed: restaurant_vote.vote_by_id
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/avee/workspace/dosier/bongo-restaurant/venv/lib/python3.9/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Users/avee/workspace/dosier/bongo-restaurant/venv/lib/python3.9/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/avee/workspace/dosier/bongo-restaurant/venv/lib/python3.9/site-packages/django/views/decorators/csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+  File "/Users/avee/workspace/dosier/bongo-restaurant/venv/lib/python3.9/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Users/avee/workspace/dosier/bongo-restaurant/venv/lib/python3.9/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/Users/avee/workspace/dosier/bongo-restaurant/venv/lib/python3.9/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/Users/avee/workspace/dosier/bongo-restaurant/venv/lib/python3.9/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/Users/avee/workspace/dosier/bongo-restaurant/venv/lib/python3.9/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Users/avee/workspace/dosier/bongo-restaurant/restaurant/views.py", line 155, in post
+    vote_serializer.save()
+  File "/Users/avee/workspace/dosier/bongo-restaurant/venv/lib/python3.9/site-packages/rest_framework/serializers.py", line 212, in save
+    self.instance = self.create(validated_data)
+  File "/Users/avee/workspace/dosier/bongo-restaurant/venv/lib/python3.9/site-packages/rest_framework/serializers.py", line 962, in create
+    instance = ModelClass._default_manager.create(**validated_data)
+  File "/Users/avee/workspace/dosier/bongo-restaurant/venv/lib/python3.9/site-packages/django/db/models/manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/Users/avee/workspace/dosier/bongo-restaurant/venv/lib/python3.9/site-packages/django/db/models/query.py", line 658, in create
+    obj.save(force_insert=True, using=self.db)
+  File "/Users/avee/workspace/dosier/bongo-restaurant/venv/lib/python3.9/site-packages/django/db/models/base.py", line 814, in save
+    self.save_base(
+  File "/Users/avee/workspace/dosier/bongo-restaurant/venv/lib/python3.9/site-packages/django/db/models/base.py", line 877, in save_base
+    updated = self._save_table(
+  File "/Users/avee/workspace/dosier/bongo-restaurant/venv/lib/python3.9/site-packages/django/db/models/base.py", line 1020, in _save_table
+    results = self._do_insert(
+  File "/Users/avee/workspace/dosier/bongo-restaurant/venv/lib/python3.9/site-packages/django/db/models/base.py", line 1061, in _do_insert
+    return manager._insert(
+  File "/Users/avee/workspace/dosier/bongo-restaurant/venv/lib/python3.9/site-packages/django/db/models/manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/Users/avee/workspace/dosier/bongo-restaurant/venv/lib/python3.9/site-packages/django/db/models/query.py", line 1805, in _insert
+    return query.get_compiler(using=using).execute_sql(returning_fields)
+  File "/Users/avee/workspace/dosier/bongo-restaurant/venv/lib/python3.9/site-packages/django/db/models/sql/compiler.py", line 1822, in execute_sql
+    cursor.execute(sql, params)
+  File "/Users/avee/workspace/dosier/bongo-restaurant/venv/lib/python3.9/site-packages/django/db/backends/utils.py", line 102, in execute
+    return super().execute(sql, params)
+  File "/Users/avee/workspace/dosier/bongo-restaurant/venv/lib/python3.9/site-packages/django/db/backends/utils.py", line 67, in execute
+    return self._execute_with_wrappers(
+  File "/Users/avee/workspace/dosier/bongo-restaurant/venv/lib/python3.9/site-packages/django/db/backends/utils.py", line 80, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "/Users/avee/workspace/dosier/bongo-restaurant/venv/lib/python3.9/site-packages/django/db/backends/utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+  File "/Users/avee/workspace/dosier/bongo-restaurant/venv/lib/python3.9/site-packages/django/db/utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "/Users/avee/workspace/dosier/bongo-restaurant/venv/lib/python3.9/site-packages/django/db/backends/utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+  File "/Users/avee/workspace/dosier/bongo-restaurant/venv/lib/python3.9/site-packages/django/db/backends/sqlite3/base.py", line 328, in execute
+    return super().execute(query, params)
+django.db.utils.IntegrityError: NOT NULL constraint failed: restaurant_vote.vote_by_id
+Internal Server Error: /api/v1/restaurant/menu/vote/c97a986b-3bc2-4009-9be7-aa41d251211c
+Traceback (most recent call last):
+  File "/Users/avee/workspace/dosier/bongo-restaurant/venv/lib/python3.9/site-packages/django/db/backends/utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+  File "/Users/avee/workspace/dosier/bongo-restaurant/venv/lib/python3.9/site-packages/django/db/backends/sqlite3/base.py", line 328, in execute
+    return super().execute(query, params)
+sqlite3.IntegrityError: NOT NULL constraint failed: restaurant_vote.vote_by_id
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/avee/workspace/dosier/bongo-restaurant/venv/lib/python3.9/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Users/avee/workspace/dosier/bongo-restaurant/venv/lib/python3.9/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/avee/workspace/dosier/bongo-restaurant/venv/lib/python3.9/site-packages/django/views/decorators/csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+  File "/Users/avee/workspace/dosier/bongo-restaurant/venv/lib/python3.9/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Users/avee/workspace/dosier/bongo-restaurant/venv/lib/python3.9/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/Users/avee/workspace/dosier/bongo-restaurant/venv/lib/python3.9/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/Users/avee/workspace/dosier/bongo-restaurant/venv/lib/python3.9/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/Users/avee/workspace/dosier/bongo-restaurant/venv/lib/python3.9/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Users/avee/workspace/dosier/bongo-restaurant/restaurant/views.py", line 155, in post
+    vote_serializer.save()
+  File "/Users/avee/workspace/dosier/bongo-restaurant/venv/lib/python3.9/site-packages/rest_framework/serializers.py", line 212, in save
+    self.instance = self.create(validated_data)
+  File "/Users/avee/workspace/dosier/bongo-restaurant/venv/lib/python3.9/site-packages/rest_framework/serializers.py", line 962, in create
+    instance = ModelClass._default_manager.create(**validated_data)
+  File "/Users/avee/workspace/dosier/bongo-restaurant/venv/lib/python3.9/site-packages/django/db/models/manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/Users/avee/workspace/dosier/bongo-restaurant/venv/lib/python3.9/site-packages/django/db/models/query.py", line 658, in create
+    obj.save(force_insert=True, using=self.db)
+  File "/Users/avee/workspace/dosier/bongo-restaurant/venv/lib/python3.9/site-packages/django/db/models/base.py", line 814, in save
+    self.save_base(
+  File "/Users/avee/workspace/dosier/bongo-restaurant/venv/lib/python3.9/site-packages/django/db/models/base.py", line 877, in save_base
+    updated = self._save_table(
+  File "/Users/avee/workspace/dosier/bongo-restaurant/venv/lib/python3.9/site-packages/django/db/models/base.py", line 1020, in _save_table
+    results = self._do_insert(
+  File "/Users/avee/workspace/dosier/bongo-restaurant/venv/lib/python3.9/site-packages/django/db/models/base.py", line 1061, in _do_insert
+    return manager._insert(
+  File "/Users/avee/workspace/dosier/bongo-restaurant/venv/lib/python3.9/site-packages/django/db/models/manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/Users/avee/workspace/dosier/bongo-restaurant/venv/lib/python3.9/site-packages/django/db/models/query.py", line 1805, in _insert
+    return query.get_compiler(using=using).execute_sql(returning_fields)
+  File "/Users/avee/workspace/dosier/bongo-restaurant/venv/lib/python3.9/site-packages/django/db/models/sql/compiler.py", line 1822, in execute_sql
+    cursor.execute(sql, params)
+  File "/Users/avee/workspace/dosier/bongo-restaurant/venv/lib/python3.9/site-packages/django/db/backends/utils.py", line 102, in execute
+    return super().execute(sql, params)
+  File "/Users/avee/workspace/dosier/bongo-restaurant/venv/lib/python3.9/site-packages/django/db/backends/utils.py", line 67, in execute
+    return self._execute_with_wrappers(
+  File "/Users/avee/workspace/dosier/bongo-restaurant/venv/lib/python3.9/site-packages/django/db/backends/utils.py", line 80, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "/Users/avee/workspace/dosier/bongo-restaurant/venv/lib/python3.9/site-packages/django/db/backends/utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+  File "/Users/avee/workspace/dosier/bongo-restaurant/venv/lib/python3.9/site-packages/django/db/utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "/Users/avee/workspace/dosier/bongo-restaurant/venv/lib/python3.9/site-packages/django/db/backends/utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+  File "/Users/avee/workspace/dosier/bongo-restaurant/venv/lib/python3.9/site-packages/django/db/backends/sqlite3/base.py", line 328, in execute
+    return super().execute(query, params)
+django.db.utils.IntegrityError: NOT NULL constraint failed: restaurant_vote.vote_by_id
+Internal Server Error: /api/v1/restaurant/menu/vote/c97a986b-3bc2-4009-9be7-aa41d251211c
+Traceback (most recent call last):
+  File "/Users/avee/workspace/dosier/bongo-restaurant/venv/lib/python3.9/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Users/avee/workspace/dosier/bongo-restaurant/venv/lib/python3.9/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/avee/workspace/dosier/bongo-restaurant/venv/lib/python3.9/site-packages/django/views/decorators/csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+  File "/Users/avee/workspace/dosier/bongo-restaurant/venv/lib/python3.9/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Users/avee/workspace/dosier/bongo-restaurant/venv/lib/python3.9/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/Users/avee/workspace/dosier/bongo-restaurant/venv/lib/python3.9/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/Users/avee/workspace/dosier/bongo-restaurant/venv/lib/python3.9/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/Users/avee/workspace/dosier/bongo-restaurant/venv/lib/python3.9/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Users/avee/workspace/dosier/bongo-restaurant/restaurant/views.py", line 154, in post
+    return HttpUtil.success_response(
+NameError: name 'vote_serializer' is not defined
+Bad Request: /api/v1/restaurant/menu/vote/c97a986b-3bc2-4009-9be7-aa41d251211c
+Bad Request: /api/v1/operation/todays-menu
+Bad Request: /api/v1/restaurant/
+Unauthorized: /api/v1/restaurant/vote-result
+Internal Server Error: /api/v1/restaurant/vote-result
+Traceback (most recent call last):
+  File "/Users/avee/workspace/dosier/bongo-restaurant/venv/lib/python3.9/site-packages/django/db/backends/utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+  File "/Users/avee/workspace/dosier/bongo-restaurant/venv/lib/python3.9/site-packages/django/db/backends/sqlite3/base.py", line 328, in execute
+    return super().execute(query, params)
+sqlite3.OperationalError: no such table: restaurant_voteresult
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/avee/workspace/dosier/bongo-restaurant/venv/lib/python3.9/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Users/avee/workspace/dosier/bongo-restaurant/venv/lib/python3.9/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/avee/workspace/dosier/bongo-restaurant/venv/lib/python3.9/site-packages/django/views/decorators/csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+  File "/Users/avee/workspace/dosier/bongo-restaurant/venv/lib/python3.9/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Users/avee/workspace/dosier/bongo-restaurant/venv/lib/python3.9/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/Users/avee/workspace/dosier/bongo-restaurant/venv/lib/python3.9/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/Users/avee/workspace/dosier/bongo-restaurant/venv/lib/python3.9/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/Users/avee/workspace/dosier/bongo-restaurant/venv/lib/python3.9/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Users/avee/workspace/dosier/bongo-restaurant/restaurant/views.py", line 158, in get
+    vote_results.delete()
+  File "/Users/avee/workspace/dosier/bongo-restaurant/venv/lib/python3.9/site-packages/django/db/models/query.py", line 1148, in delete
+    deleted, _rows_count = collector.delete()
+  File "/Users/avee/workspace/dosier/bongo-restaurant/venv/lib/python3.9/site-packages/django/db/models/deletion.py", line 472, in delete
+    count = qs._raw_delete(using=self.using)
+  File "/Users/avee/workspace/dosier/bongo-restaurant/venv/lib/python3.9/site-packages/django/db/models/query.py", line 1170, in _raw_delete
+    cursor = query.get_compiler(using).execute_sql(CURSOR)
+  File "/Users/avee/workspace/dosier/bongo-restaurant/venv/lib/python3.9/site-packages/django/db/models/sql/compiler.py", line 1562, in execute_sql
+    cursor.execute(sql, params)
+  File "/Users/avee/workspace/dosier/bongo-restaurant/venv/lib/python3.9/site-packages/django/db/backends/utils.py", line 102, in execute
+    return super().execute(sql, params)
+  File "/Users/avee/workspace/dosier/bongo-restaurant/venv/lib/python3.9/site-packages/django/db/backends/utils.py", line 67, in execute
+    return self._execute_with_wrappers(
+  File "/Users/avee/workspace/dosier/bongo-restaurant/venv/lib/python3.9/site-packages/django/db/backends/utils.py", line 80, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "/Users/avee/workspace/dosier/bongo-restaurant/venv/lib/python3.9/site-packages/django/db/backends/utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+  File "/Users/avee/workspace/dosier/bongo-restaurant/venv/lib/python3.9/site-packages/django/db/utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "/Users/avee/workspace/dosier/bongo-restaurant/venv/lib/python3.9/site-packages/django/db/backends/utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+  File "/Users/avee/workspace/dosier/bongo-restaurant/venv/lib/python3.9/site-packages/django/db/backends/sqlite3/base.py", line 328, in execute
+    return super().execute(query, params)
+django.db.utils.OperationalError: no such table: restaurant_voteresult
+Internal Server Error: /api/v1/restaurant/vote-result
+Traceback (most recent call last):
+  File "/Users/avee/workspace/dosier/bongo-restaurant/venv/lib/python3.9/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Users/avee/workspace/dosier/bongo-restaurant/venv/lib/python3.9/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/avee/workspace/dosier/bongo-restaurant/venv/lib/python3.9/site-packages/django/views/decorators/csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+  File "/Users/avee/workspace/dosier/bongo-restaurant/venv/lib/python3.9/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Users/avee/workspace/dosier/bongo-restaurant/venv/lib/python3.9/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/Users/avee/workspace/dosier/bongo-restaurant/venv/lib/python3.9/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/Users/avee/workspace/dosier/bongo-restaurant/venv/lib/python3.9/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/Users/avee/workspace/dosier/bongo-restaurant/venv/lib/python3.9/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Users/avee/workspace/dosier/bongo-restaurant/restaurant/views.py", line 161, in get
+    total_menu_wise_vote = Vote.objects.filter(created_at__lte=today_end,
+  File "/Users/avee/workspace/dosier/bongo-restaurant/venv/lib/python3.9/site-packages/django/db/models/manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/Users/avee/workspace/dosier/bongo-restaurant/venv/lib/python3.9/site-packages/django/db/models/query.py", line 1436, in filter
+    return self._filter_or_exclude(False, args, kwargs)
+  File "/Users/avee/workspace/dosier/bongo-restaurant/venv/lib/python3.9/site-packages/django/db/models/query.py", line 1454, in _filter_or_exclude
+    clone._filter_or_exclude_inplace(negate, args, kwargs)
+  File "/Users/avee/workspace/dosier/bongo-restaurant/venv/lib/python3.9/site-packages/django/db/models/query.py", line 1461, in _filter_or_exclude_inplace
+    self._query.add_q(Q(*args, **kwargs))
+  File "/Users/avee/workspace/dosier/bongo-restaurant/venv/lib/python3.9/site-packages/django/db/models/sql/query.py", line 1545, in add_q
+    clause, _ = self._add_q(q_object, self.used_aliases)
+  File "/Users/avee/workspace/dosier/bongo-restaurant/venv/lib/python3.9/site-packages/django/db/models/sql/query.py", line 1576, in _add_q
+    child_clause, needed_inner = self.build_filter(
+  File "/Users/avee/workspace/dosier/bongo-restaurant/venv/lib/python3.9/site-packages/django/db/models/sql/query.py", line 1464, in build_filter
+    self.check_related_objects(join_info.final_field, value, join_info.opts)
+  File "/Users/avee/workspace/dosier/bongo-restaurant/venv/lib/python3.9/site-packages/django/db/models/sql/query.py", line 1275, in check_related_objects
+    self.check_query_object_type(value, opts, field)
+  File "/Users/avee/workspace/dosier/bongo-restaurant/venv/lib/python3.9/site-packages/django/db/models/sql/query.py", line 1252, in check_query_object_type
+    raise ValueError(
+ValueError: Cannot query "Vote object (451452e1-8fe4-4ded-94ed-7ea3daa0b737)": Must be "Menu" instance.
+Internal Server Error: /api/v1/restaurant/vote-result
+Traceback (most recent call last):
+  File "/Users/avee/workspace/dosier/bongo-restaurant/venv/lib/python3.9/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Users/avee/workspace/dosier/bongo-restaurant/venv/lib/python3.9/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/avee/workspace/dosier/bongo-restaurant/venv/lib/python3.9/site-packages/django/views/decorators/csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+  File "/Users/avee/workspace/dosier/bongo-restaurant/venv/lib/python3.9/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Users/avee/workspace/dosier/bongo-restaurant/venv/lib/python3.9/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/Users/avee/workspace/dosier/bongo-restaurant/venv/lib/python3.9/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/Users/avee/workspace/dosier/bongo-restaurant/venv/lib/python3.9/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/Users/avee/workspace/dosier/bongo-restaurant/venv/lib/python3.9/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Users/avee/workspace/dosier/bongo-restaurant/restaurant/views.py", line 162, in get
+    total_menu_wise_vote = Vote.objects.filter(created_at__lte=today_end,
+  File "/Users/avee/workspace/dosier/bongo-restaurant/venv/lib/python3.9/site-packages/django/db/models/manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/Users/avee/workspace/dosier/bongo-restaurant/venv/lib/python3.9/site-packages/django/db/models/query.py", line 1436, in filter
+    return self._filter_or_exclude(False, args, kwargs)
+  File "/Users/avee/workspace/dosier/bongo-restaurant/venv/lib/python3.9/site-packages/django/db/models/query.py", line 1454, in _filter_or_exclude
+    clone._filter_or_exclude_inplace(negate, args, kwargs)
+  File "/Users/avee/workspace/dosier/bongo-restaurant/venv/lib/python3.9/site-packages/django/db/models/query.py", line 1461, in _filter_or_exclude_inplace
+    self._query.add_q(Q(*args, **kwargs))
+  File "/Users/avee/workspace/dosier/bongo-restaurant/venv/lib/python3.9/site-packages/django/db/models/sql/query.py", line 1545, in add_q
+    clause, _ = self._add_q(q_object, self.used_aliases)
+  File "/Users/avee/workspace/dosier/bongo-restaurant/venv/lib/python3.9/site-packages/django/db/models/sql/query.py", line 1576, in _add_q
+    child_clause, needed_inner = self.build_filter(
+  File "/Users/avee/workspace/dosier/bongo-restaurant/venv/lib/python3.9/site-packages/django/db/models/sql/query.py", line 1464, in build_filter
+    self.check_related_objects(join_info.final_field, value, join_info.opts)
+  File "/Users/avee/workspace/dosier/bongo-restaurant/venv/lib/python3.9/site-packages/django/db/models/sql/query.py", line 1275, in check_related_objects
+    self.check_query_object_type(value, opts, field)
+  File "/Users/avee/workspace/dosier/bongo-restaurant/venv/lib/python3.9/site-packages/django/db/models/sql/query.py", line 1252, in check_query_object_type
+    raise ValueError(
+ValueError: Cannot query "Vote object (451452e1-8fe4-4ded-94ed-7ea3daa0b737)": Must be "Menu" instance.
+Internal Server Error: /api/v1/restaurant/vote-result
+Traceback (most recent call last):
+  File "/Users/avee/workspace/dosier/bongo-restaurant/venv/lib/python3.9/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Users/avee/workspace/dosier/bongo-restaurant/venv/lib/python3.9/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/avee/workspace/dosier/bongo-restaurant/venv/lib/python3.9/site-packages/django/views/decorators/csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+  File "/Users/avee/workspace/dosier/bongo-restaurant/venv/lib/python3.9/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Users/avee/workspace/dosier/bongo-restaurant/venv/lib/python3.9/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/Users/avee/workspace/dosier/bongo-restaurant/venv/lib/python3.9/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/Users/avee/workspace/dosier/bongo-restaurant/venv/lib/python3.9/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/Users/avee/workspace/dosier/bongo-restaurant/venv/lib/python3.9/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Users/avee/workspace/dosier/bongo-restaurant/restaurant/views.py", line 162, in get
+    total_menu_wise_vote = Vote.objects.filter(created_at__lte=today_end,
+  File "/Users/avee/workspace/dosier/bongo-restaurant/venv/lib/python3.9/site-packages/django/db/models/manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/Users/avee/workspace/dosier/bongo-restaurant/venv/lib/python3.9/site-packages/django/db/models/query.py", line 1436, in filter
+    return self._filter_or_exclude(False, args, kwargs)
+  File "/Users/avee/workspace/dosier/bongo-restaurant/venv/lib/python3.9/site-packages/django/db/models/query.py", line 1454, in _filter_or_exclude
+    clone._filter_or_exclude_inplace(negate, args, kwargs)
+  File "/Users/avee/workspace/dosier/bongo-restaurant/venv/lib/python3.9/site-packages/django/db/models/query.py", line 1461, in _filter_or_exclude_inplace
+    self._query.add_q(Q(*args, **kwargs))
+  File "/Users/avee/workspace/dosier/bongo-restaurant/venv/lib/python3.9/site-packages/django/db/models/sql/query.py", line 1545, in add_q
+    clause, _ = self._add_q(q_object, self.used_aliases)
+  File "/Users/avee/workspace/dosier/bongo-restaurant/venv/lib/python3.9/site-packages/django/db/models/sql/query.py", line 1576, in _add_q
+    child_clause, needed_inner = self.build_filter(
+  File "/Users/avee/workspace/dosier/bongo-restaurant/venv/lib/python3.9/site-packages/django/db/models/sql/query.py", line 1464, in build_filter
+    self.check_related_objects(join_info.final_field, value, join_info.opts)
+  File "/Users/avee/workspace/dosier/bongo-restaurant/venv/lib/python3.9/site-packages/django/db/models/sql/query.py", line 1275, in check_related_objects
+    self.check_query_object_type(value, opts, field)
+  File "/Users/avee/workspace/dosier/bongo-restaurant/venv/lib/python3.9/site-packages/django/db/models/sql/query.py", line 1252, in check_query_object_type
+    raise ValueError(
+ValueError: Cannot query "Vote object (451452e1-8fe4-4ded-94ed-7ea3daa0b737)": Must be "Menu" instance.
+Internal Server Error: /api/v1/restaurant/vote-result
+Traceback (most recent call last):
+  File "/Users/avee/workspace/dosier/bongo-restaurant/venv/lib/python3.9/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Users/avee/workspace/dosier/bongo-restaurant/venv/lib/python3.9/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/avee/workspace/dosier/bongo-restaurant/venv/lib/python3.9/site-packages/django/views/decorators/csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+  File "/Users/avee/workspace/dosier/bongo-restaurant/venv/lib/python3.9/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Users/avee/workspace/dosier/bongo-restaurant/venv/lib/python3.9/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/Users/avee/workspace/dosier/bongo-restaurant/venv/lib/python3.9/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/Users/avee/workspace/dosier/bongo-restaurant/venv/lib/python3.9/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/Users/avee/workspace/dosier/bongo-restaurant/venv/lib/python3.9/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Users/avee/workspace/dosier/bongo-restaurant/restaurant/views.py", line 167, in get
+    date=datetime.date())
+TypeError: unbound method datetime.date() needs an argument
+Internal Server Error: /api/v1/restaurant/vote-result
+Traceback (most recent call last):
+  File "/Users/avee/workspace/dosier/bongo-restaurant/venv/lib/python3.9/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Users/avee/workspace/dosier/bongo-restaurant/venv/lib/python3.9/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/avee/workspace/dosier/bongo-restaurant/venv/lib/python3.9/site-packages/django/views/decorators/csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+  File "/Users/avee/workspace/dosier/bongo-restaurant/venv/lib/python3.9/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Users/avee/workspace/dosier/bongo-restaurant/venv/lib/python3.9/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/Users/avee/workspace/dosier/bongo-restaurant/venv/lib/python3.9/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/Users/avee/workspace/dosier/bongo-restaurant/venv/lib/python3.9/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/Users/avee/workspace/dosier/bongo-restaurant/venv/lib/python3.9/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Users/avee/workspace/dosier/bongo-restaurant/restaurant/views.py", line 167, in get
+    date=datetime.date().today())
+TypeError: unbound method datetime.date() needs an argument
+Internal Server Error: /api/v1/restaurant/vote-result
+Traceback (most recent call last):
+  File "/Users/avee/workspace/dosier/bongo-restaurant/venv/lib/python3.9/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Users/avee/workspace/dosier/bongo-restaurant/venv/lib/python3.9/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/avee/workspace/dosier/bongo-restaurant/venv/lib/python3.9/site-packages/django/views/decorators/csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+  File "/Users/avee/workspace/dosier/bongo-restaurant/venv/lib/python3.9/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Users/avee/workspace/dosier/bongo-restaurant/venv/lib/python3.9/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/Users/avee/workspace/dosier/bongo-restaurant/venv/lib/python3.9/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/Users/avee/workspace/dosier/bongo-restaurant/venv/lib/python3.9/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/Users/avee/workspace/dosier/bongo-restaurant/venv/lib/python3.9/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Users/avee/workspace/dosier/bongo-restaurant/restaurant/views.py", line 167, in get
+    date=datetime.date.today())
+AttributeError: 'method_descriptor' object has no attribute 'today'
+Internal Server Error: /api/v1/restaurant/vote-result
+Traceback (most recent call last):
+  File "/Users/avee/workspace/dosier/bongo-restaurant/venv/lib/python3.9/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Users/avee/workspace/dosier/bongo-restaurant/venv/lib/python3.9/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/avee/workspace/dosier/bongo-restaurant/venv/lib/python3.9/site-packages/django/views/decorators/csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+  File "/Users/avee/workspace/dosier/bongo-restaurant/venv/lib/python3.9/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Users/avee/workspace/dosier/bongo-restaurant/venv/lib/python3.9/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/Users/avee/workspace/dosier/bongo-restaurant/venv/lib/python3.9/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/Users/avee/workspace/dosier/bongo-restaurant/venv/lib/python3.9/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/Users/avee/workspace/dosier/bongo-restaurant/venv/lib/python3.9/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Users/avee/workspace/dosier/bongo-restaurant/restaurant/views.py", line 165, in get
+    vote_result = VoteResult(menu=menu,
+  File "/Users/avee/workspace/dosier/bongo-restaurant/venv/lib/python3.9/site-packages/django/db/models/base.py", line 543, in __init__
+    _setattr(self, field.name, rel_obj)
+  File "/Users/avee/workspace/dosier/bongo-restaurant/venv/lib/python3.9/site-packages/django/db/models/fields/related_descriptors.py", line 266, in __set__
+    raise ValueError(
+ValueError: Cannot assign "<Vote: Vote object (451452e1-8fe4-4ded-94ed-7ea3daa0b737)>": "VoteResult.menu" must be a "Menu" instance.
+Internal Server Error: /api/v1/restaurant/vote-result
+Traceback (most recent call last):
+  File "/Users/avee/workspace/dosier/bongo-restaurant/venv/lib/python3.9/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Users/avee/workspace/dosier/bongo-restaurant/venv/lib/python3.9/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/avee/workspace/dosier/bongo-restaurant/venv/lib/python3.9/site-packages/django/views/decorators/csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+  File "/Users/avee/workspace/dosier/bongo-restaurant/venv/lib/python3.9/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Users/avee/workspace/dosier/bongo-restaurant/venv/lib/python3.9/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/Users/avee/workspace/dosier/bongo-restaurant/venv/lib/python3.9/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/Users/avee/workspace/dosier/bongo-restaurant/venv/lib/python3.9/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/Users/avee/workspace/dosier/bongo-restaurant/venv/lib/python3.9/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Users/avee/workspace/dosier/bongo-restaurant/restaurant/views.py", line 162, in get
+    total_menu_wise_vote = Vote.objects.filter(created_at__lte=today_end,
+  File "/Users/avee/workspace/dosier/bongo-restaurant/venv/lib/python3.9/site-packages/django/db/models/manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/Users/avee/workspace/dosier/bongo-restaurant/venv/lib/python3.9/site-packages/django/db/models/query.py", line 1436, in filter
+    return self._filter_or_exclude(False, args, kwargs)
+  File "/Users/avee/workspace/dosier/bongo-restaurant/venv/lib/python3.9/site-packages/django/db/models/query.py", line 1454, in _filter_or_exclude
+    clone._filter_or_exclude_inplace(negate, args, kwargs)
+  File "/Users/avee/workspace/dosier/bongo-restaurant/venv/lib/python3.9/site-packages/django/db/models/query.py", line 1461, in _filter_or_exclude_inplace
+    self._query.add_q(Q(*args, **kwargs))
+  File "/Users/avee/workspace/dosier/bongo-restaurant/venv/lib/python3.9/site-packages/django/db/models/sql/query.py", line 1545, in add_q
+    clause, _ = self._add_q(q_object, self.used_aliases)
+  File "/Users/avee/workspace/dosier/bongo-restaurant/venv/lib/python3.9/site-packages/django/db/models/sql/query.py", line 1576, in _add_q
+    child_clause, needed_inner = self.build_filter(
+  File "/Users/avee/workspace/dosier/bongo-restaurant/venv/lib/python3.9/site-packages/django/db/models/sql/query.py", line 1464, in build_filter
+    self.check_related_objects(join_info.final_field, value, join_info.opts)
+  File "/Users/avee/workspace/dosier/bongo-restaurant/venv/lib/python3.9/site-packages/django/db/models/sql/query.py", line 1275, in check_related_objects
+    self.check_query_object_type(value, opts, field)
+  File "/Users/avee/workspace/dosier/bongo-restaurant/venv/lib/python3.9/site-packages/django/db/models/sql/query.py", line 1252, in check_query_object_type
+    raise ValueError(
+ValueError: Cannot query "Vote object (451452e1-8fe4-4ded-94ed-7ea3daa0b737)": Must be "Menu" instance.
+Internal Server Error: /api/v1/restaurant/vote-result
+Traceback (most recent call last):
+  File "/Users/avee/workspace/dosier/bongo-restaurant/venv/lib/python3.9/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Users/avee/workspace/dosier/bongo-restaurant/venv/lib/python3.9/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/avee/workspace/dosier/bongo-restaurant/venv/lib/python3.9/site-packages/django/views/decorators/csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+  File "/Users/avee/workspace/dosier/bongo-restaurant/venv/lib/python3.9/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Users/avee/workspace/dosier/bongo-restaurant/venv/lib/python3.9/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/Users/avee/workspace/dosier/bongo-restaurant/venv/lib/python3.9/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/Users/avee/workspace/dosier/bongo-restaurant/venv/lib/python3.9/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/Users/avee/workspace/dosier/bongo-restaurant/venv/lib/python3.9/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Users/avee/workspace/dosier/bongo-restaurant/restaurant/views.py", line 175, in get
+    max_vote = Vote.objects.aggregate(max_vote=Max('total_vote'))
+  File "/Users/avee/workspace/dosier/bongo-restaurant/venv/lib/python3.9/site-packages/django/db/models/manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/Users/avee/workspace/dosier/bongo-restaurant/venv/lib/python3.9/site-packages/django/db/models/query.py", line 592, in aggregate
+    return self.query.chain().get_aggregation(self.db, kwargs)
+  File "/Users/avee/workspace/dosier/bongo-restaurant/venv/lib/python3.9/site-packages/django/db/models/sql/query.py", line 398, in get_aggregation
+    aggregate = aggregate_expr.resolve_expression(
+  File "/Users/avee/workspace/dosier/bongo-restaurant/venv/lib/python3.9/site-packages/django/db/models/aggregates.py", line 64, in resolve_expression
+    c = super().resolve_expression(query, allow_joins, reuse, summarize)
+  File "/Users/avee/workspace/dosier/bongo-restaurant/venv/lib/python3.9/site-packages/django/db/models/expressions.py", line 943, in resolve_expression
+    c.source_expressions[pos] = arg.resolve_expression(
+  File "/Users/avee/workspace/dosier/bongo-restaurant/venv/lib/python3.9/site-packages/django/db/models/expressions.py", line 822, in resolve_expression
+    return query.resolve_ref(self.name, allow_joins, reuse, summarize)
+  File "/Users/avee/workspace/dosier/bongo-restaurant/venv/lib/python3.9/site-packages/django/db/models/sql/query.py", line 1976, in resolve_ref
+    join_info = self.setup_joins(
+  File "/Users/avee/workspace/dosier/bongo-restaurant/venv/lib/python3.9/site-packages/django/db/models/sql/query.py", line 1823, in setup_joins
+    path, final_field, targets, rest = self.names_to_path(
+  File "/Users/avee/workspace/dosier/bongo-restaurant/venv/lib/python3.9/site-packages/django/db/models/sql/query.py", line 1724, in names_to_path
+    raise FieldError(
+django.core.exceptions.FieldError: Cannot resolve keyword 'total_vote' into field. Choices are: created_at, guid, menu, menu_id, status, vote_by, vote_by_id
+Internal Server Error: /api/v1/restaurant/vote-result
+Traceback (most recent call last):
+  File "/Users/avee/workspace/dosier/bongo-restaurant/venv/lib/python3.9/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Users/avee/workspace/dosier/bongo-restaurant/venv/lib/python3.9/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/avee/workspace/dosier/bongo-restaurant/venv/lib/python3.9/site-packages/django/views/decorators/csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+  File "/Users/avee/workspace/dosier/bongo-restaurant/venv/lib/python3.9/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Users/avee/workspace/dosier/bongo-restaurant/venv/lib/python3.9/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/Users/avee/workspace/dosier/bongo-restaurant/venv/lib/python3.9/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/Users/avee/workspace/dosier/bongo-restaurant/venv/lib/python3.9/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/Users/avee/workspace/dosier/bongo-restaurant/venv/lib/python3.9/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Users/avee/workspace/dosier/bongo-restaurant/restaurant/views.py", line 176, in get
+    print(max_vote["total_vote"])
+KeyError: 'total_vote'
+Internal Server Error: /api/v1/restaurant/vote-result
+Traceback (most recent call last):
+  File "/Users/avee/workspace/dosier/bongo-restaurant/venv/lib/python3.9/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Users/avee/workspace/dosier/bongo-restaurant/venv/lib/python3.9/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/avee/workspace/dosier/bongo-restaurant/venv/lib/python3.9/site-packages/django/views/decorators/csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+  File "/Users/avee/workspace/dosier/bongo-restaurant/venv/lib/python3.9/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Users/avee/workspace/dosier/bongo-restaurant/venv/lib/python3.9/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/Users/avee/workspace/dosier/bongo-restaurant/venv/lib/python3.9/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/Users/avee/workspace/dosier/bongo-restaurant/venv/lib/python3.9/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/Users/avee/workspace/dosier/bongo-restaurant/venv/lib/python3.9/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Users/avee/workspace/dosier/bongo-restaurant/restaurant/views.py", line 172, in get
+    vote_results = VoteResult.objects.filter(created__lte=today_end, created__gte=today_start)
+  File "/Users/avee/workspace/dosier/bongo-restaurant/venv/lib/python3.9/site-packages/django/db/models/manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/Users/avee/workspace/dosier/bongo-restaurant/venv/lib/python3.9/site-packages/django/db/models/query.py", line 1436, in filter
+    return self._filter_or_exclude(False, args, kwargs)
+  File "/Users/avee/workspace/dosier/bongo-restaurant/venv/lib/python3.9/site-packages/django/db/models/query.py", line 1454, in _filter_or_exclude
+    clone._filter_or_exclude_inplace(negate, args, kwargs)
+  File "/Users/avee/workspace/dosier/bongo-restaurant/venv/lib/python3.9/site-packages/django/db/models/query.py", line 1461, in _filter_or_exclude_inplace
+    self._query.add_q(Q(*args, **kwargs))
+  File "/Users/avee/workspace/dosier/bongo-restaurant/venv/lib/python3.9/site-packages/django/db/models/sql/query.py", line 1545, in add_q
+    clause, _ = self._add_q(q_object, self.used_aliases)
+  File "/Users/avee/workspace/dosier/bongo-restaurant/venv/lib/python3.9/site-packages/django/db/models/sql/query.py", line 1576, in _add_q
+    child_clause, needed_inner = self.build_filter(
+  File "/Users/avee/workspace/dosier/bongo-restaurant/venv/lib/python3.9/site-packages/django/db/models/sql/query.py", line 1426, in build_filter
+    lookups, parts, reffed_expression = self.solve_lookup_type(arg, summarize)
+  File "/Users/avee/workspace/dosier/bongo-restaurant/venv/lib/python3.9/site-packages/django/db/models/sql/query.py", line 1236, in solve_lookup_type
+    _, field, _, lookup_parts = self.names_to_path(lookup_splitted, self.get_meta())
+  File "/Users/avee/workspace/dosier/bongo-restaurant/venv/lib/python3.9/site-packages/django/db/models/sql/query.py", line 1724, in names_to_path
+    raise FieldError(
+django.core.exceptions.FieldError: Cannot resolve keyword 'created' into field. Choices are: created_at, date, guid, menu, menu_id, status, total_vote
+Not Found: /
+Bad Request: /api/v1/restaurant/menu/vote/ddd27a3b-3e9b-448f-bf46-c6ae13c7e225

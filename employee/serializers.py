@@ -1,7 +1,7 @@
-from django.contrib.auth.hashers import make_password
-from django.core.exceptions import ValidationError
 from rest_framework import serializers, status
-from employee.models import Employee
+from .models import Employee
+from django.core.exceptions import ValidationError
+from django.contrib.auth.hashers import make_password
 
 
 class EmployeeSerializer(serializers.Serializer):
@@ -19,7 +19,7 @@ class EmployeeSerializer(serializers.Serializer):
         email = Employee.objects.filter(email=attrs.get("email")).exists()
         if email:
             raise ValidationError(
-                "User with email exists", code=status.HTTP_403_FORBIDDEN
+                "Employee with email exists", code=status.HTTP_403_FORBIDDEN
             )
 
         if attrs.get("password") != attrs.get("confirm_password"):
