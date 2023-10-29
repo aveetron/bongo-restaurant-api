@@ -1,5 +1,6 @@
-from restaurant.views import *
 from django.urls import path
+
+from restaurant.views import *
 
 urlpatterns = [
     path("", RestaurantAPIView.as_view()),

@@ -1,10 +1,13 @@
-from rest_framework.response import Response
-from rest_framework.generics import GenericAPIView
-from rest_framework import status, permissions
-from core.http_util import HttpUtil
-from validate_email import validate_email
-from .serializers import EmployeeSerializer
 import logging
+
+from rest_framework import permissions, status
+from rest_framework.generics import GenericAPIView
+from rest_framework.response import Response
+from validate_email import validate_email
+
+from core.http_util import HttpUtil
+
+from .serializers import EmployeeSerializer
 
 logger = logging.getLogger(__name__)
 

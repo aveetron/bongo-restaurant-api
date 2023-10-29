@@ -1,11 +1,12 @@
-from rest_framework.response import Response
-from rest_framework import status, permissions
+from datetime import datetime, time, timedelta
+
+from rest_framework import permissions, status
 from rest_framework.generics import GenericAPIView
-from restaurant.serializers import *
-from restaurant.models import *
-from .serializers import CurrentDayMenuSerializer
-from datetime import datetime, timedelta, time
+
 from core.http_util import HttpUtil
+from restaurant.serializers import *
+
+from .serializers import CurrentDayMenuSerializer
 
 
 class CurrentDayMenuAPIView(GenericAPIView):
@@ -18,16 +19,12 @@ class CurrentDayMenuAPIView(GenericAPIView):
             tomorrow = today + timedelta(1)
             today_start = datetime.combine(today, time())
             today_end = datetime.combine(tomorrow, time())
-            todays_menu = Menu.objects.filter(created_at__lte=today_end, created_at__gte=today_start)
+            todays_menu = Menu.objects.filter(
+                created_at__lte=today_end, created_at__gte=today_start
+            )
             todays_menu_serializer = self.serializer_class(todays_menu, many=True)
             return HttpUtil.success_response(
-                "success",
-                todays_menu_serializer.data,
-                status.HTTP_200_OK
+                "success", todays_menu_serializer.data, status.HTTP_200_OK
             )
         except Exception as e:
-            return HttpUtil.error_response(
-                e.args[0],
-                {},
-                status.HTTP_400_BAD_REQUEST
-            )
+            return HttpUtil.error_response(e.args[0], {}, status.HTTP_400_BAD_REQUEST)

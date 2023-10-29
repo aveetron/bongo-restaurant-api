@@ -1,7 +1,9 @@
 import uuid
+
 from django.db import models
-from operation.models import BongoRestaurantBaseModel
+
 from employee.models import Employee
+from operation.models import BongoRestaurantBaseModel
 
 
 class Restaurant(BongoRestaurantBaseModel):

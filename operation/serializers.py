@@ -1,4 +1,5 @@
 from rest_framework import serializers
+
 from restaurant.models import Vote
 from restaurant.serializers import VoteSerializer
 
@@ -14,5 +15,3 @@ class CurrentDayMenuSerializer(serializers.Serializer):
         votes = Vote.objects.filter(menu=menu)
         vote_list = [{"vote_by": vote.vote_by.email} for vote in votes]
         return vote_list
-
-

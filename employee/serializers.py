@@ -1,7 +1,8 @@
-from rest_framework import serializers, status
-from .models import Employee
-from django.core.exceptions import ValidationError
 from django.contrib.auth.hashers import make_password
+from django.core.exceptions import ValidationError
+from rest_framework import serializers, status
+
+from .models import Employee
 
 
 class EmployeeSerializer(serializers.Serializer):
